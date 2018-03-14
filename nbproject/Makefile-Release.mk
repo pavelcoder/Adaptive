@@ -35,9 +35,14 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/NetworkDownloader.o \
-	${OBJECTDIR}/funcs.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/model/Chunk.o \
+	${OBJECTDIR}/model/Video.o \
+	${OBJECTDIR}/net/NetSpeedChange.o \
+	${OBJECTDIR}/net/NetworkDownloader.o \
+	${OBJECTDIR}/player/AdaptiveTrackSelector.o \
+	${OBJECTDIR}/player/Player.o \
+	${OBJECTDIR}/test/PlayerTester.o
 
 
 # C Compiler Flags
@@ -64,20 +69,45 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/adaptive: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/adaptive ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/NetworkDownloader.o: NetworkDownloader.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/NetworkDownloader.o NetworkDownloader.cpp
-
-${OBJECTDIR}/funcs.o: funcs.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/funcs.o funcs.cpp
-
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/model/Chunk.o: model/Chunk.cpp
+	${MKDIR} -p ${OBJECTDIR}/model
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/model/Chunk.o model/Chunk.cpp
+
+${OBJECTDIR}/model/Video.o: model/Video.cpp
+	${MKDIR} -p ${OBJECTDIR}/model
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/model/Video.o model/Video.cpp
+
+${OBJECTDIR}/net/NetSpeedChange.o: net/NetSpeedChange.cpp
+	${MKDIR} -p ${OBJECTDIR}/net
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/net/NetSpeedChange.o net/NetSpeedChange.cpp
+
+${OBJECTDIR}/net/NetworkDownloader.o: net/NetworkDownloader.cpp
+	${MKDIR} -p ${OBJECTDIR}/net
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/net/NetworkDownloader.o net/NetworkDownloader.cpp
+
+${OBJECTDIR}/player/AdaptiveTrackSelector.o: player/AdaptiveTrackSelector.cpp
+	${MKDIR} -p ${OBJECTDIR}/player
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/AdaptiveTrackSelector.o player/AdaptiveTrackSelector.cpp
+
+${OBJECTDIR}/player/Player.o: player/Player.cpp
+	${MKDIR} -p ${OBJECTDIR}/player
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/Player.o player/Player.cpp
+
+${OBJECTDIR}/test/PlayerTester.o: test/PlayerTester.cpp
+	${MKDIR} -p ${OBJECTDIR}/test
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test/PlayerTester.o test/PlayerTester.cpp
 
 # Subprojects
 .build-subprojects:

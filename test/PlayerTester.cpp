@@ -4,3 +4,15 @@
  * and open the template in the editor.
  */
 
+/* 
+ * File:   PlayerTester.cpp
+ * Author: pavel
+ * 
+ * Created on 14 марта 2018 г., 20:45
+ */
+
+#include "PlayerTester.h"
+
+PlayerTester::PlayerTester() {
+}
+

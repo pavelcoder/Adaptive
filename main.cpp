@@ -12,7 +12,11 @@
  */
 
 #include <cstdlib>
-#include "NetworkDownloader.h"
+#include <stdio.h>
+#include "net/NetworkDownloader.h"
+#include "player/Player.h"
+#include "test/PlayerTester.h"
+#include "net/NetSpeedChange.h"
 
 using namespace std;
 
@@ -20,7 +24,13 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    
+    NetSpeedChange netChanges[] = {NetSpeedChange(0 , 1000000)};
+    NetworkDownloader networkDownloader = NetworkDownloader(1, netChanges);
+    long qualities[] = {700000, 1200000, 2500000};
+    Video video = Video(30, 3, qualities);
+    Player player = Player(&networkDownloader, &video);
+    long duration = player.play();
+    printf("Played durung %d millis", duration);
     return 0;
 }
 

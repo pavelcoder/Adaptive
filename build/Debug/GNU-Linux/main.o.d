@@ -1,3 +1,27 @@
-build/Debug/GNU-Linux/main.o: main.cpp NetworkDownloader.h
+build/Debug/GNU-Linux/main.o: main.cpp net/NetworkDownloader.h \
+ net/NetSpeedChange.h player/Player.h player/AdaptiveTrackSelector.h \
+ player/PlayerListener.h player/../model/Chunk.h player/../model/Video.h \
+ player/../net/NetworkDownloader.h test/PlayerTester.h \
+ test/../player/PlayerListener.h net/NetSpeedChange.h
 
-NetworkDownloader.h:
+net/NetworkDownloader.h:
+
+net/NetSpeedChange.h:
+
+player/Player.h:
+
+player/AdaptiveTrackSelector.h:
+
+player/PlayerListener.h:
+
+player/../model/Chunk.h:
+
+player/../model/Video.h:
+
+player/../net/NetworkDownloader.h:
+
+test/PlayerTester.h:
+
+test/../player/PlayerListener.h:
+
+net/NetSpeedChange.h:
