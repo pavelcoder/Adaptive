@@ -12,22 +12,38 @@
  */
 
 #include "NetworkDownloader.h"
+#include <stdio.h>
 
 NetworkDownloader::NetworkDownloader(int speedChangeCount, NetSpeedChange speedChanges[]) {
     this->speedChanges = speedChanges;
-    millisGone = 0;
     bytesReadInCurrentSegment = 0;
     currentNetSpeedIndex = 0;
-    this->speedChangeCount = 0;
+    this->speedChangeCount = speedChangeCount;
 }
 
+//return microseconds
 long NetworkDownloader::readChunk(long size) {
-    if( currentNetSpeedIndex < speedChangeCount - 1 ) {
-        NetSpeedChange nextSpeedChange = this->speedChanges[currentNetSpeedIndex + 1];
-        //int totalBytesLeft
+    if( size == 0 ) return 0;
+    NetSpeedChange currentSpeedChange = speedChanges[currentNetSpeedIndex];
+    long segmentSizeBytes = currentSpeedChange.getTotalBytes();
+    long bytesLeft = segmentSizeBytes - bytesReadInCurrentSegment;
+    long bytesToReadFromCurrentSegment = size;
+    long bytesLeftAfterSegment = 0;
+    if( size > bytesLeft ) {
+        bytesToReadFromCurrentSegment = bytesLeft;
+        bytesLeftAfterSegment = size - bytesLeft;
     }
+     
+    long currentSegmentDurationMicros = bytesToReadFromCurrentSegment * 1000 * 1000 / currentSpeedChange.speedBytesPerSecond;
+    bytesReadInCurrentSegment += bytesToReadFromCurrentSegment;
     
-    return 100;
+    if( bytesLeftAfterSegment > 0 ) {
+        currentNetSpeedIndex = getNextChunkIndex();
+        bytesReadInCurrentSegment = 0;
+        return currentSegmentDurationMicros + readChunk(bytesLeftAfterSegment);
+    } else {
+        return currentSegmentDurationMicros;
+    }
 }
 
 void NetworkDownloader::sleep(long millis) {

@@ -13,8 +13,8 @@
 
 #include "NetSpeedChange.h"
 
-NetSpeedChange::NetSpeedChange(long millisFromStart, long bitrate) {
-    this->millisFromStart = millisFromStart;
-    this->bitrate = bitrate;
+NetSpeedChange::NetSpeedChange(long durationMillis, long speedBytesPerSecond) {
+    this->durationMillis = durationMillis;
+    this->speedBytesPerSecond = speedBytesPerSecond;
 }
 

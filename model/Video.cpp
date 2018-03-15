@@ -17,6 +17,7 @@ Video::Video(int chunkCount, int qualityCount, long qualitiesBitrate[]) {
     this->chunkCount = chunkCount;
     this->qualityCount = qualityCount;
     this->qualitiesBitrate = qualitiesBitrate;
+    chunkDurationMillis = 8 * 1000;
 }
 
 int Video::getQualityCount() {

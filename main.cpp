@@ -24,13 +24,13 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    NetSpeedChange netChanges[] = {NetSpeedChange(0 , 1000000)};
+    NetSpeedChange netChanges[] = {NetSpeedChange( 10 * 1000, 200000)};
     NetworkDownloader networkDownloader = NetworkDownloader(1, netChanges);
     long qualities[] = {700000, 1200000, 2500000};
     Video video = Video(30, 3, qualities);
     Player player = Player(&networkDownloader, &video);
     long duration = player.play();
-    printf("Played durung %d millis", duration);
+    printf("Played durung %d sec", duration / 1000000);
     return 0;
 }
 

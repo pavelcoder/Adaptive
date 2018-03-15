@@ -16,9 +16,13 @@
 
 class NetSpeedChange {
 public:
-    NetSpeedChange(long millisFromStart, long bitrate);
-    long millisFromStart;
-    long bitrate;
+    NetSpeedChange(long durationMillis, long speedBytesPerSecond);
+    long speedBytesPerSecond;
+    long durationMillis;
+    
+    long getTotalBytes() {
+        return speedBytesPerSecond * 1000 / durationMillis;
+    }
 private:
    
 };

@@ -18,7 +18,7 @@ AdaptiveTrackSelector::AdaptiveTrackSelector(Video *video) {
 }
 
 long AdaptiveTrackSelector::getNextChunkBitrate(int chunkIndex, long playbackPositionMs, long bufferSizeMs) {
-    return video->getQualityAt(video->getChunkCount() - 1);
+    return video->getQualityAt(video->getQualityCount() - 1);
 }
 
 void AdaptiveTrackSelector::onVideoStarted() {

@@ -28,10 +28,13 @@ public:
     void sleep(long millis);
 private:
     NetSpeedChange* speedChanges;
-    long millisGone;
     int currentNetSpeedIndex;
     int speedChangeCount;
     long bytesReadInCurrentSegment;
+    
+    int getNextChunkIndex() {
+        return (currentNetSpeedIndex + 1) % speedChangeCount;
+    }
 };
 
 #endif /* NETWORKDOWNLOADER_H */

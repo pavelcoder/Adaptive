@@ -21,6 +21,7 @@ public:
     int getQualityCount();
     long getQualityAt(int index);
     int getChunkCount();
+    long chunkDurationMillis;
 private:
     int chunkCount;
     int qualityCount;
