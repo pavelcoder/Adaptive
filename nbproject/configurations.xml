@@ -9,6 +9,7 @@
       <itemPath>net/NetSpeedChange.cpp</itemPath>
       <itemPath>net/NetworkDownloader.cpp</itemPath>
       <itemPath>player/Player.cpp</itemPath>
+      <itemPath>player/PlayerListener.cpp</itemPath>
       <itemPath>test/PlayerTester.cpp</itemPath>
       <itemPath>model/Video.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
@@ -77,6 +78,8 @@
       </item>
       <item path="player/Player.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="player/PlayerListener.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="player/PlayerListener.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="test/PlayerTester.cpp" ex="false" tool="1" flavor2="0">
@@ -129,6 +132,8 @@
       <item path="player/Player.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="player/Player.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="player/PlayerListener.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="player/PlayerListener.h" ex="false" tool="3" flavor2="0">
       </item>

@@ -13,11 +13,14 @@
 
 #include "Player.h"
 #include <stdio.h>
+#include "PlayerListener.h"
 
 Player::Player(NetworkDownloader *networkDownloader, Video *video) {
     this->networkDownloader = networkDownloader;
     this->video = video;
     trackSelector = new AdaptiveTrackSelector(video);
+    //listeners = new vector<PlayerListener>();
+    //listeners->push_back(trackSelector);
 }
 
 Player::~Player() {

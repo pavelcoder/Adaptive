@@ -42,6 +42,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/net/NetworkDownloader.o \
 	${OBJECTDIR}/player/AdaptiveTrackSelector.o \
 	${OBJECTDIR}/player/Player.o \
+	${OBJECTDIR}/player/PlayerListener.o \
 	${OBJECTDIR}/test/PlayerTester.o
 
 
@@ -103,6 +104,11 @@ ${OBJECTDIR}/player/Player.o: player/Player.cpp
 	${MKDIR} -p ${OBJECTDIR}/player
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/Player.o player/Player.cpp
+
+${OBJECTDIR}/player/PlayerListener.o: player/PlayerListener.cpp
+	${MKDIR} -p ${OBJECTDIR}/player
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/PlayerListener.o player/PlayerListener.cpp
 
 ${OBJECTDIR}/test/PlayerTester.o: test/PlayerTester.cpp
 	${MKDIR} -p ${OBJECTDIR}/test
