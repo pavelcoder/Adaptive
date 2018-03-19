@@ -14,6 +14,8 @@
 #ifndef NETSPEEDCHANGE_H
 #define NETSPEEDCHANGE_H
 
+#include <stdio.h>
+
 class NetSpeedChange {
 public:
     NetSpeedChange(long durationMillis, long speedBytesPerSecond);
@@ -21,7 +23,8 @@ public:
     long durationMillis;
     
     long getTotalBytes() {
-        return speedBytesPerSecond * 1000 / durationMillis;
+        long res = speedBytesPerSecond * durationMillis / 1000;
+        return res;
     }
 private:
    

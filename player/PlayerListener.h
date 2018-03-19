@@ -8,7 +8,7 @@
  * File:   PlayerListener.h
  * Author: pavel
  *
- * Created on 14 марта 2018 г., 20:36
+ * Created on 19 марта 2018 г., 11:32
  */
 
 #ifndef PLAYERLISTENER_H
@@ -16,8 +16,9 @@
 
 #include "../model/Chunk.h"
 
-class PlayerListener{
+class PlayerListener {
     public: 
+        PlayerListener();
         virtual void onVideoStarted() = 0;
         virtual void onBufferizationStart() = 0;
         virtual void onBufferizationStop(long durationMs) = 0;

@@ -19,7 +19,7 @@
 
 class NetworkDownloader {
 public:
-    NetworkDownloader(int speedChangeCount, NetSpeedChange speedChanges[]);
+    NetworkDownloader(int speedChangeCount, NetSpeedChange *speedChanges);
 
     /*
      *  @return количество миллисекунд, потраченных на скачивание
@@ -27,7 +27,7 @@ public:
     long readChunk(long size);
     void sleep(long millis);
 private:
-    NetSpeedChange* speedChanges;
+    NetSpeedChange *speedChanges;
     int currentNetSpeedIndex;
     int speedChangeCount;
     long bytesReadInCurrentSegment;

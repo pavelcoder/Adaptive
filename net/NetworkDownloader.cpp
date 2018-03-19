@@ -14,7 +14,7 @@
 #include "NetworkDownloader.h"
 #include <stdio.h>
 
-NetworkDownloader::NetworkDownloader(int speedChangeCount, NetSpeedChange speedChanges[]) {
+NetworkDownloader::NetworkDownloader(int speedChangeCount, NetSpeedChange *speedChanges) {
     this->speedChanges = speedChanges;
     bytesReadInCurrentSegment = 0;
     currentNetSpeedIndex = 0;
@@ -24,7 +24,8 @@ NetworkDownloader::NetworkDownloader(int speedChangeCount, NetSpeedChange speedC
 //return microseconds
 long NetworkDownloader::readChunk(long size) {
     if( size == 0 ) return 0;
-    NetSpeedChange currentSpeedChange = speedChanges[currentNetSpeedIndex];
+    NetSpeedChange currentSpeedChange = this->speedChanges[currentNetSpeedIndex];
+    NetSpeedChange *p = &currentSpeedChange;
     long segmentSizeBytes = currentSpeedChange.getTotalBytes();
     long bytesLeft = segmentSizeBytes - bytesReadInCurrentSegment;
     long bytesToReadFromCurrentSegment = size;

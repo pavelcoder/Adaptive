@@ -5,18 +5,14 @@
  */
 
 /* 
- * File:   Chunk.cpp
+ * File:   PlayerListener.cpp
  * Author: pavel
  * 
- * Created on 14 марта 2018 г., 20:18
+ * Created on 19 марта 2018 г., 11:32
  */
 
-#include "Chunk.h"
+#include "PlayerListener.h"
 
-Chunk::Chunk(long size, int index) {
-    this->index = index;
-    this->size = size;
+PlayerListener::PlayerListener() {
 };
-
-
 

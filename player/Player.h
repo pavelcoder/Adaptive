@@ -18,6 +18,9 @@
 #include "PlayerListener.h"
 #include "../net/NetworkDownloader.h"
 #include <stdio.h>
+//#include <vector>
+
+using namespace std;
 
 #define DOWNLOAD_BUFFER_SIZE (10 * 1024)
 #define VIDEO_FOR_PLAY_ATOM_MILLIS 1000
@@ -48,6 +51,9 @@ private:
     
     bool isBuffering;
     int bufferingReason;
+    
+    //vector<PlayerListener> listeners;
+    
     void playVideoIfTimeCome();
     void setBufferingState(bool isBuffering, int reason) {
         if( isBuffering == this->isBuffering ) return;
