@@ -13,25 +13,33 @@
 
 #include "AdaptiveTrackSelector.h"
 
-AdaptiveTrackSelector::AdaptiveTrackSelector(Video *video) {
-    this->video = video;
-}
+AdaptiveTrackSelector::AdaptiveTrackSelector() {}
 
 long AdaptiveTrackSelector::getNextChunkBitrate(int chunkIndex, long playbackPositionMs, long bufferSizeMs) {
     return video->getQualityAt(video->getQualityCount() - 1);
 }
 
-void AdaptiveTrackSelector::onVideoStarted() {
+void AdaptiveTrackSelector::onVideoStarted(Video* video) {
+    this->video = video;
 }
 
-void AdaptiveTrackSelector::onBufferizationStart() {
+void AdaptiveTrackSelector::onBufferizationStart(int reason) {
 }
 
-void AdaptiveTrackSelector::onBufferizationStop(long durationMs) {
+void AdaptiveTrackSelector::onBufferizationStop(int reason, long durationMs) {
 }
 
 void AdaptiveTrackSelector::onChunkLoadError(Chunk chunk) {
 }
 
-void AdaptiveTrackSelector::onVideoStopped() {
+void AdaptiveTrackSelector::onVideoStopped(Video* video) {
+}
+
+
+void AdaptiveTrackSelector::onStartBufferingChunk(Chunk* chunk) {
+    
+}
+
+void AdaptiveTrackSelector::onFinishBufferingChunk(Chunk* chunk, long durationMillis, bool isSuccess) {
+    
 }

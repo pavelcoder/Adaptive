@@ -16,16 +16,16 @@
 
 NetworkDownloader::NetworkDownloader(int speedChangeCount, NetSpeedChange *speedChanges) {
     this->speedChanges = speedChanges;
-    bytesReadInCurrentSegment = 0;
     currentNetSpeedIndex = 0;
     this->speedChangeCount = speedChangeCount;
+    NetSpeedChange currentSpeedChange = this->speedChanges[currentNetSpeedIndex];
+    bytesReadInCurrentSegment = 0;
 }
 
 //return microseconds
 long NetworkDownloader::readChunk(long size) {
     if( size == 0 ) return 0;
     NetSpeedChange currentSpeedChange = this->speedChanges[currentNetSpeedIndex];
-    NetSpeedChange *p = &currentSpeedChange;
     long segmentSizeBytes = currentSpeedChange.getTotalBytes();
     long bytesLeft = segmentSizeBytes - bytesReadInCurrentSegment;
     long bytesToReadFromCurrentSegment = size;

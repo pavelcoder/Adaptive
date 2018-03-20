@@ -16,7 +16,6 @@
 
 #include "NetSpeedChange.h"
 
-
 class NetworkDownloader {
 public:
     NetworkDownloader(int speedChangeCount, NetSpeedChange *speedChanges);

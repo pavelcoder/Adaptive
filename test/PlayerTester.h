@@ -15,12 +15,31 @@
 #define PLAYERTESTER_H
 
 #include "../player/PlayerListener.h"
+#include <vector>
+
+using namespace std;
+
+struct VIDEO_STATS {
+    int bufferizationEmptyBufferCount;
+    float agressiveness;
+};
 
 class PlayerTester : public PlayerListener {
 public:
     PlayerTester();
+    
+    virtual void onVideoStarted(Video* video);
+    virtual void onBufferizationStart(int reason);
+    virtual void onBufferizationStop(int reason, long durationMs);
+    virtual void onChunkLoadError(Chunk chunk);
+    virtual void onVideoStopped(Video* video);
+    
+    virtual void onStartBufferingChunk(Chunk* chunk);
+    virtual void onFinishBufferingChunk(Chunk* chunk, long durationMillis, bool isSuccess);
 private:
-
+    vector<VIDEO_STATS> videoStats;
+    VIDEO_STATS* currentVideoStat;
+    
 };
 
 #endif /* PLAYERTESTER_H */

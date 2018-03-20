@@ -13,18 +13,31 @@
 
 #include "Player.h"
 #include <stdio.h>
+#include <ctime>
 #include "PlayerListener.h"
 
-Player::Player(NetworkDownloader *networkDownloader, Video *video) {
+Player::Player(NetworkDownloader *networkDownloader, Video *video, AdaptiveTrackSelector* selector) {
     this->networkDownloader = networkDownloader;
     this->video = video;
-    trackSelector = new AdaptiveTrackSelector(video);
-    //listeners = new vector<PlayerListener>();
-    //listeners->push_back(trackSelector);
+    trackSelector = new AdaptiveTrackSelector();
+    listeners.push_back(trackSelector);
 }
 
 Player::~Player() {
     delete trackSelector;
+}
+
+void Player::addListener(PlayerListener* listener) {
+    listeners.push_back(trackSelector);
+}
+
+void Player::removeListener(PlayerListener* listener) {
+    for(int i = 0; i < listeners.size(); ++i) {
+        if( listeners[i] == listener ) {
+            listeners.erase(listeners.begin() + i);
+            return;
+        }
+    }
 }
 
 long Player::play() {
@@ -33,6 +46,9 @@ long Player::play() {
     bufferizedMicros = 0;
     lastVideoAtomStartedAtMicros = 0;
     
+    for(int i = 0; i < listeners.size(); ++i) {
+        listeners[i]->onVideoStarted(video);
+    }
     setBufferingState(true, BUFFERING_REASON_STARTING);
     for( int i = 0; i < video->getChunkCount(); i++ ) {
         printf("Downloading chunk : %d, bufferizedMillisFromStart = %ld\r\n", i, bufferizedMicros / 1000000);
@@ -62,6 +78,9 @@ long Player::play() {
             }
         }
     }
+    for(int i = 0; i < listeners.size(); ++i) {
+        listeners[i]->onVideoStopped(video);
+    }
     return microsGoneFromVideoStart;
 }
 
@@ -85,3 +104,21 @@ void Player::playVideoIfTimeCome() {
     }
 }
 
+void Player::setBufferingState(bool isBuffering, int reason) {
+    if( isBuffering == this->isBuffering ) return;
+    this->isBuffering = isBuffering;
+    bufferingReason = reason;
+    for(int i = 0; i < listeners.size(); ++i) {
+        if( isBuffering ) {
+            listeners[i]->onBufferizationStart(reason);
+            bufferizationStartTs = std::time(0);
+        } else {
+            listeners[i]->onBufferizationStop(reason, std::time(0) - bufferizationStartTs);
+        }
+    }
+    printf("New state: %s, position = %ld sec, buffered until %ld sec, millis gone =  %ld\r\n", 
+            isBuffering ? "BUFFERING" : "PLAYING", 
+            playbackPositionMicros / 1000000, 
+            bufferizedMicros / 1000000,
+            microsGoneFromVideoStart / 1000);
+}

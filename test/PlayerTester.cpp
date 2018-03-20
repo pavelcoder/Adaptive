@@ -16,3 +16,31 @@
 PlayerTester::PlayerTester() {
 }
 
+void PlayerTester::onVideoStarted(Video* video) {
+    currentVideoStat = new VIDEO_STATS();
+    currentVideoStat->agressiveness = 0;
+    currentVideoStat->bufferizationEmptyBufferCount = 0;
+}
+
+void PlayerTester::onBufferizationStart(int reason) {
+    currentVideoStat->bufferizationEmptyBufferCount++;
+}
+
+void PlayerTester::onBufferizationStop(int reason, long durationMs) {
+}
+
+void PlayerTester::onChunkLoadError(Chunk chunk) {
+}
+
+void PlayerTester::onVideoStopped(Video* video) {
+    videoStats.push_back(*currentVideoStat);
+    delete currentVideoStat;
+}
+
+void PlayerTester::onStartBufferingChunk(Chunk* chunk) {
+    
+}
+
+void PlayerTester::onFinishBufferingChunk(Chunk* chunk, long durationMillis, bool isSuccess) {
+    
+}

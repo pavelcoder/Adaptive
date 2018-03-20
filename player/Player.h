@@ -18,7 +18,7 @@
 #include "PlayerListener.h"
 #include "../net/NetworkDownloader.h"
 #include <stdio.h>
-//#include <vector>
+#include <vector>
 
 using namespace std;
 
@@ -34,11 +34,13 @@ using namespace std;
 
 class Player {
 public:
-    Player(NetworkDownloader* networkDownloader, Video* video);
+    Player(NetworkDownloader * networkDownloader, Video* video, AdaptiveTrackSelector* selector);
     ~Player();
     /* return total play millis
      */
     long play();
+    void addListener(PlayerListener* listener);
+    void removeListener(PlayerListener* listener);
 private:
     NetworkDownloader* networkDownloader;
     Video* video;
@@ -51,20 +53,12 @@ private:
     
     bool isBuffering;
     int bufferingReason;
+    long bufferizationStartTs;
     
-    //vector<PlayerListener> listeners;
+    vector<PlayerListener*> listeners;
     
     void playVideoIfTimeCome();
-    void setBufferingState(bool isBuffering, int reason) {
-        if( isBuffering == this->isBuffering ) return;
-        this->isBuffering = isBuffering;
-        bufferingReason = reason;
-        printf("New state: %s, position = %ld sec, buffered until %ld sec, millis gone =  %ld\r\n", 
-                isBuffering ? "BUFFERING" : "PLAYING", 
-                playbackPositionMicros / 1000000, 
-                bufferizedMicros / 1000000,
-                microsGoneFromVideoStart / 1000);
-    }
+    void setBufferingState(bool isBuffering, int reason);
 };
 
 #endif /* PLAYER_H */
