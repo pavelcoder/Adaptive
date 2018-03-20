@@ -16,12 +16,14 @@
 
 #include "../player/PlayerListener.h"
 #include <vector>
+#include "../player/Player.h"
 
 using namespace std;
 
 struct VIDEO_STATS {
+    float adaptability;
     int bufferizationEmptyBufferCount;
-    float agressiveness;
+    //float adaptationFrequency;
 };
 
 class PlayerTester : public PlayerListener {
@@ -36,10 +38,14 @@ public:
     
     virtual void onStartBufferingChunk(Chunk* chunk);
     virtual void onFinishBufferingChunk(Chunk* chunk, long durationMillis, bool isSuccess);
-private:
-    vector<VIDEO_STATS> videoStats;
-    VIDEO_STATS* currentVideoStat;
     
+    void printResult();
+private:
+    Video* video;
+    vector<VIDEO_STATS> videoStats;
+
+    vector<float> segmentsAdaptability;
+    int bufferizationCount;
 };
 
 #endif /* PLAYERTESTER_H */

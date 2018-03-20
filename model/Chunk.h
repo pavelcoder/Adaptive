@@ -17,7 +17,6 @@
 class Chunk {
 public:
     Chunk(long size, int index);
-private:
     long size;
     int index;
 };

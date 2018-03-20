@@ -20,7 +20,7 @@
 class AdaptiveTrackSelector: public PlayerListener {
 public:
     AdaptiveTrackSelector();
-    long getNextChunkBitrate(int chunkIndex, long playbackPositionMs, long bufferSizeMs);
+    long getNextChunkBytesPerSecond(int chunkIndex, long playbackPositionMs, long bufferSizeMs);
     
     virtual void onVideoStarted(Video* video);
     virtual void onBufferizationStart(int reason);
@@ -29,7 +29,7 @@ public:
     virtual void onVideoStopped(Video* video);
     
     virtual void onStartBufferingChunk(Chunk* chunk);
-        virtual void onFinishBufferingChunk(Chunk* chunk, long durationMillis, bool isSuccess);
+    virtual void onFinishBufferingChunk(Chunk* chunk, long durationMillis, bool isSuccess);
 
 private:
     Video* video;

@@ -28,7 +28,7 @@ Player::~Player() {
 }
 
 void Player::addListener(PlayerListener* listener) {
-    listeners.push_back(trackSelector);
+    listeners.push_back(listener);
 }
 
 void Player::removeListener(PlayerListener* listener) {
@@ -50,11 +50,16 @@ long Player::play() {
         listeners[i]->onVideoStarted(video);
     }
     setBufferingState(true, BUFFERING_REASON_STARTING);
-    for( int i = 0; i < video->getChunkCount(); i++ ) {
-        printf("Downloading chunk : %d, bufferizedMillisFromStart = %ld\r\n", i, bufferizedMicros / 1000000);
-        long chunkBitrate = trackSelector->getNextChunkBitrate(i, playbackPositionMicros / 1000, (bufferizedMicros - playbackPositionMicros) / 1000);
-        long chunkTotalBytes = chunkBitrate / 8 * video->chunkDurationMillis / 1000;
+    for( int i = 0; i < video->getChunkCount(); i++ ) { 
+        long chunkByterate = trackSelector->getNextChunkBytesPerSecond(i, playbackPositionMicros / 1000, (bufferizedMicros - playbackPositionMicros) / 1000);
+        long chunkTotalBytes = chunkByterate * video->chunkDurationMillis / 1000;
         long chunkBytesAlreadyRead = 0;
+        Chunk chunk = Chunk(chunkTotalBytes, i);
+        for(int i = 0; i < listeners.size(); ++i) {
+            listeners[i]->onStartBufferingChunk(&chunk);
+        }
+        long startChunkMicros = microsGoneFromVideoStart;
+        
         while(true) {
             playVideoIfTimeCome();
             
@@ -70,12 +75,16 @@ long Player::play() {
             
             chunkBytesAlreadyRead += bytesToReadNow;
             microsGoneFromVideoStart += networkDownloader->readChunk(bytesToReadNow);
-            long videoMicrosWasRead = bytesToReadNow * 8 * 1000 * 1000 / chunkBitrate;
+            long videoMicrosWasRead = bytesToReadNow * 1000 * 1000 / chunkByterate;
             bufferizedMicros += videoMicrosWasRead;
            
             if(chunkFinished) {
                 break;
             }
+        }
+        
+        for(int i = 0; i < listeners.size(); ++i) {
+            listeners[i]->onFinishBufferingChunk(&chunk, (microsGoneFromVideoStart - startChunkMicros) / 1000, true);
         }
     }
     for(int i = 0; i < listeners.size(); ++i) {
@@ -96,7 +105,7 @@ void Player::playVideoIfTimeCome() {
          
     if( canPlay ) {
         setBufferingState(false, BUFFERING_REASON_NONE);
-        printf("Played 1 second from position %ld sec\r\n", playbackPositionMicros / 1000000);
+        //printf("Played 1 second from position %ld sec\r\n", playbackPositionMicros / 1000000);
         lastVideoAtomStartedAtMicros = microsGoneFromVideoStart;
         playbackPositionMicros += VIDEO_FOR_PLAY_ATOM_MILLIS * 1000;
     } else {
@@ -116,9 +125,9 @@ void Player::setBufferingState(bool isBuffering, int reason) {
             listeners[i]->onBufferizationStop(reason, std::time(0) - bufferizationStartTs);
         }
     }
-    printf("New state: %s, position = %ld sec, buffered until %ld sec, millis gone =  %ld\r\n", 
+    /*printf("New state: %s, position = %ld sec, buffered until %ld sec, millis gone =  %ld\r\n", 
             isBuffering ? "BUFFERING" : "PLAYING", 
             playbackPositionMicros / 1000000, 
             bufferizedMicros / 1000000,
-            microsGoneFromVideoStart / 1000);
+            microsGoneFromVideoStart / 1000);*/
 }

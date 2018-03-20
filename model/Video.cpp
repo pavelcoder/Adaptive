@@ -13,10 +13,10 @@
 
 #include "Video.h"
 
-Video::Video(int chunkCount, int qualityCount, long qualitiesBitrate[]) {
+Video::Video(int chunkCount, int qualityCount, long qualitiesBytesPerSecond[]) {
     this->chunkCount = chunkCount;
     this->qualityCount = qualityCount;
-    this->qualitiesBitrate = qualitiesBitrate;
+    this->qualitiesBytesPerSecond = qualitiesBytesPerSecond;
     chunkDurationMillis = 8 * 1000;
 }
 
@@ -25,9 +25,13 @@ int Video::getQualityCount() {
 }
 
 long Video::getQualityAt(int index) {
-    return this->qualitiesBitrate[index];
+    return this->qualitiesBytesPerSecond[index];
 }
 
 int Video::getChunkCount() {
     return chunkCount;
+}
+
+long Video::getMaxQualityBytesPerSecond() {
+    return qualitiesBytesPerSecond[qualityCount - 1];
 }

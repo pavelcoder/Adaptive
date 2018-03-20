@@ -24,15 +24,18 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    NetSpeedChange netSpeedChange( 10 * 1000, 200000); 
+    NetSpeedChange netSpeedChange( 60 * 60 * 1000, 100 * 1000); 
     NetSpeedChange netChanges[] = {netSpeedChange};
     NetworkDownloader networkDownloader(1, netChanges);
-    long qualities[] = {700000, 1200000, 2500000};
+    long qualities[] = {100 * 1000, 150 * 1000, 120 * 1000};
     Video video(30, 3, qualities);
     AdaptiveTrackSelector trackSelector;
+    PlayerTester tester;
     Player player(&networkDownloader, &video, &trackSelector);
+    player.addListener(&tester);
     long duration = player.play();
-    printf("Played durung %ld sec\r\n", duration / 1000000);
+    player.removeListener(&tester);
+    tester.printResult();
     fflush(stdout);
     return 0;
 }

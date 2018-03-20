@@ -16,16 +16,17 @@
 
 class Video {
 public:
-    Video(int chunkCount, int qualityCount, long qualitiesBitrate[]);
+    Video(int chunkCount, int qualityCount, long qualitiesBytesPerSecond[]);
     
     int getQualityCount();
     long getQualityAt(int index);
     int getChunkCount();
     long chunkDurationMillis;
+    long getMaxQualityBytesPerSecond();
 private:
     int chunkCount;
     int qualityCount;
-    long* qualitiesBitrate;
+    long* qualitiesBytesPerSecond;
 };
 
 #endif /* VIDEO_H */
