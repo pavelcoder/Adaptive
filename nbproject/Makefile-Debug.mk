@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/json/jsoncpp.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/model/Chunk.o \
 	${OBJECTDIR}/model/Video.o \
@@ -70,50 +71,55 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/adaptive: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/adaptive ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/json/jsoncpp.o: json/jsoncpp.cpp
+	${MKDIR} -p ${OBJECTDIR}/json
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/json/jsoncpp.o json/jsoncpp.cpp
+
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 ${OBJECTDIR}/model/Chunk.o: model/Chunk.cpp
 	${MKDIR} -p ${OBJECTDIR}/model
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/model/Chunk.o model/Chunk.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/model/Chunk.o model/Chunk.cpp
 
 ${OBJECTDIR}/model/Video.o: model/Video.cpp
 	${MKDIR} -p ${OBJECTDIR}/model
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/model/Video.o model/Video.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/model/Video.o model/Video.cpp
 
 ${OBJECTDIR}/net/NetSpeedChange.o: net/NetSpeedChange.cpp
 	${MKDIR} -p ${OBJECTDIR}/net
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/net/NetSpeedChange.o net/NetSpeedChange.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/net/NetSpeedChange.o net/NetSpeedChange.cpp
 
 ${OBJECTDIR}/net/NetworkDownloader.o: net/NetworkDownloader.cpp
 	${MKDIR} -p ${OBJECTDIR}/net
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/net/NetworkDownloader.o net/NetworkDownloader.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/net/NetworkDownloader.o net/NetworkDownloader.cpp
 
 ${OBJECTDIR}/player/AdaptiveTrackSelector.o: player/AdaptiveTrackSelector.cpp
 	${MKDIR} -p ${OBJECTDIR}/player
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/AdaptiveTrackSelector.o player/AdaptiveTrackSelector.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/AdaptiveTrackSelector.o player/AdaptiveTrackSelector.cpp
 
 ${OBJECTDIR}/player/Player.o: player/Player.cpp
 	${MKDIR} -p ${OBJECTDIR}/player
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/Player.o player/Player.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/Player.o player/Player.cpp
 
 ${OBJECTDIR}/player/PlayerListener.o: player/PlayerListener.cpp
 	${MKDIR} -p ${OBJECTDIR}/player
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/PlayerListener.o player/PlayerListener.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/PlayerListener.o player/PlayerListener.cpp
 
 ${OBJECTDIR}/test/PlayerTester.o: test/PlayerTester.cpp
 	${MKDIR} -p ${OBJECTDIR}/test
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test/PlayerTester.o test/PlayerTester.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test/PlayerTester.o test/PlayerTester.cpp
 
 # Subprojects
 .build-subprojects:

@@ -12,6 +12,7 @@
       <itemPath>player/PlayerListener.cpp</itemPath>
       <itemPath>test/PlayerTester.cpp</itemPath>
       <itemPath>model/Video.cpp</itemPath>
+      <itemPath>json/jsoncpp.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="HeaderFiles"
@@ -25,6 +26,8 @@
       <itemPath>player/PlayerListener.h</itemPath>
       <itemPath>test/PlayerTester.h</itemPath>
       <itemPath>model/Video.h</itemPath>
+      <itemPath>json/json-forwards.h</itemPath>
+      <itemPath>json/json.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Файлы ресурсов"
@@ -51,7 +54,19 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <cTool>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <standard>8</standard>
+        </ccTool>
       </compileType>
+      <item path="json/json-forwards.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="json/json.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="json/jsoncpp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="model/Chunk.cpp" ex="false" tool="1" flavor2="0">
@@ -107,6 +122,12 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="json/json-forwards.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="json/json.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="json/jsoncpp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="model/Chunk.cpp" ex="false" tool="1" flavor2="0">

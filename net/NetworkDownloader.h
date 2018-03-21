@@ -14,11 +14,14 @@
 #ifndef NETWORKDOWNLOADER_H
 #define NETWORKDOWNLOADER_H
 
+#include <vector>
 #include "NetSpeedChange.h"
+
+using namespace std;
 
 class NetworkDownloader {
 public:
-    NetworkDownloader(int speedChangeCount, NetSpeedChange *speedChanges);
+    NetworkDownloader(vector<NetSpeedChange*>* changes);
 
     /*
      *  @return количество миллисекунд, потраченных на скачивание
@@ -26,13 +29,12 @@ public:
     long readChunk(long size);
     void sleep(long millis);
 private:
-    NetSpeedChange *speedChanges;
+    vector<NetSpeedChange*>* speedChanges;
     int currentNetSpeedIndex;
-    int speedChangeCount;
     long bytesReadInCurrentSegment;
     
-    int getNextChunkIndex() {
-        return (currentNetSpeedIndex + 1) % speedChangeCount;
+    int getNextSegmentIndex() {
+        return (currentNetSpeedIndex + 1) % speedChanges->size();
     }
 };
 

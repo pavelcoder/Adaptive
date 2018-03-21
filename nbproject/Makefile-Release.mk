@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/json/jsoncpp.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/model/Chunk.o \
 	${OBJECTDIR}/model/Video.o \
@@ -69,6 +70,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/adaptive: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/adaptive ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/json/jsoncpp.o: json/jsoncpp.cpp
+	${MKDIR} -p ${OBJECTDIR}/json
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/json/jsoncpp.o json/jsoncpp.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}

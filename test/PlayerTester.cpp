@@ -58,7 +58,6 @@ void PlayerTester::onFinishBufferingChunk(Chunk* chunk, long durationMillis, boo
     segmentsAdaptability.push_back( chunkAdaptiveness );
 }
 
-
 void PlayerTester::printResult() {
     float sumAdaptability = 0;
     int bufferizations = 0;
@@ -67,7 +66,7 @@ void PlayerTester::printResult() {
         bufferizations += videoStats[i].bufferizationEmptyBufferCount;
     }
     printf("===========\r\nPlayed %d video.\r\nAdaptiveness = %.3f\r\nBufferization per video = %.3f", 
-            videoStats.size(),
+            (int)videoStats.size(),
             sumAdaptability / videoStats.size(),
             (float)bufferizations / videoStats.size());
 }

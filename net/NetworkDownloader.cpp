@@ -14,19 +14,17 @@
 #include "NetworkDownloader.h"
 #include <stdio.h>
 
-NetworkDownloader::NetworkDownloader(int speedChangeCount, NetSpeedChange *speedChanges) {
-    this->speedChanges = speedChanges;
+NetworkDownloader::NetworkDownloader(vector<NetSpeedChange*>* changes) {
+    this->speedChanges = changes;
     currentNetSpeedIndex = 0;
-    this->speedChangeCount = speedChangeCount;
-    NetSpeedChange currentSpeedChange = this->speedChanges[currentNetSpeedIndex];
     bytesReadInCurrentSegment = 0;
 }
 
 //return microseconds
 long NetworkDownloader::readChunk(long size) {
     if( size == 0 ) return 0;
-    NetSpeedChange currentSpeedChange = this->speedChanges[currentNetSpeedIndex];
-    long segmentSizeBytes = currentSpeedChange.getTotalBytes();
+    NetSpeedChange *currentSpeedChange = this->speedChanges->at(currentNetSpeedIndex);
+    long segmentSizeBytes = currentSpeedChange->getTotalBytes();
     long bytesLeft = segmentSizeBytes - bytesReadInCurrentSegment;
     long bytesToReadFromCurrentSegment = size;
     long bytesLeftAfterSegment = 0;
@@ -35,11 +33,11 @@ long NetworkDownloader::readChunk(long size) {
         bytesLeftAfterSegment = size - bytesLeft;
     }
      
-    long currentSegmentDurationMicros = bytesToReadFromCurrentSegment * 1000 * 1000 / currentSpeedChange.speedBytesPerSecond;
+    long currentSegmentDurationMicros = bytesToReadFromCurrentSegment * 1000 * 1000 / currentSpeedChange->speedBytesPerSecond;
     bytesReadInCurrentSegment += bytesToReadFromCurrentSegment;
     
     if( bytesLeftAfterSegment > 0 ) {
-        currentNetSpeedIndex = getNextChunkIndex();
+        currentNetSpeedIndex = getNextSegmentIndex();
         bytesReadInCurrentSegment = 0;
         return currentSegmentDurationMicros + readChunk(bytesLeftAfterSegment);
     } else {
