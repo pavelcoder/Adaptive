@@ -5,22 +5,20 @@
  */
 
 /* 
- * File:   AdaptiveTrackSelector.h
+ * File:   ThroughputTrackSelector.h
  * Author: pavel
  *
- * Created on 14 марта 2018 г., 20:31
+ * Created on 22 марта 2018 г., 14:53
  */
 
-#ifndef ADAPTIVETRACKSELECTOR_H
-#define ADAPTIVETRACKSELECTOR_H
+#ifndef THROUGHPUTTRACKSELECTOR_H
+#define THROUGHPUTTRACKSELECTOR_H
 
-#include "PlayerListener.h"
-#include "../model/Video.h"
 #include "BaseTrackSelector.h"
 
-class AdaptiveTrackSelector: public BaseTrackSelector {
+class ThroughputTrackSelector : public BaseTrackSelector {
 public:
-    AdaptiveTrackSelector();
+    ThroughputTrackSelector();
     virtual long getNextChunkBytesPerSecond(int chunkIndex, long playbackPositionMs, long bufferSizeMs);
     
     virtual void onBufferizationStart(int reason);
@@ -29,7 +27,9 @@ public:
     
     virtual void onStartBufferingChunk(Chunk* chunk);
     virtual void onFinishBufferingChunk(Chunk* chunk, long durationMillis, long bytesRead, bool isSuccess);
+private:
+
 };
 
-#endif /* ADAPTIVETRACKSELECTOR_H */
+#endif /* THROUGHPUTTRACKSELECTOR_H */
 

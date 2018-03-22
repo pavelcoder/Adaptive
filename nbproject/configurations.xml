@@ -5,12 +5,14 @@
                    displayName="Исходные файлы"
                    projectFiles="true">
       <itemPath>player/AdaptiveTrackSelector.cpp</itemPath>
+      <itemPath>player/BaseTrackSelector.cpp</itemPath>
       <itemPath>model/Chunk.cpp</itemPath>
       <itemPath>net/NetSpeedChange.cpp</itemPath>
       <itemPath>net/NetworkDownloader.cpp</itemPath>
       <itemPath>player/Player.cpp</itemPath>
       <itemPath>player/PlayerListener.cpp</itemPath>
       <itemPath>test/PlayerTester.cpp</itemPath>
+      <itemPath>player/ThroughputTrackSelector.cpp</itemPath>
       <itemPath>model/Video.cpp</itemPath>
       <itemPath>json/jsoncpp.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
@@ -18,13 +20,15 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Файлы заголовков"
                    projectFiles="true">
-      <itemPath>player/AdaptiveTrackSelector.h</itemPath>
+      <itemPath>player/AdaptiveTrackSelectorBola.h</itemPath>
+      <itemPath>player/BaseTrackSelector.h</itemPath>
       <itemPath>model/Chunk.h</itemPath>
       <itemPath>net/NetSpeedChange.h</itemPath>
       <itemPath>net/NetworkDownloader.h</itemPath>
       <itemPath>player/Player.h</itemPath>
       <itemPath>player/PlayerListener.h</itemPath>
       <itemPath>test/PlayerTester.h</itemPath>
+      <itemPath>player/ThroughputTrackSelector.h</itemPath>
       <itemPath>model/Video.h</itemPath>
       <itemPath>json/json-forwards.h</itemPath>
       <itemPath>json/json.h</itemPath>
@@ -32,6 +36,17 @@
     <logicalFolder name="ResourceFiles"
                    displayName="Файлы ресурсов"
                    projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Файлы тестов"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Важные файлы"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Файлы тестов"
@@ -87,7 +102,11 @@
       </item>
       <item path="player/AdaptiveTrackSelector.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="player/AdaptiveTrackSelector.h" ex="false" tool="3" flavor2="0">
+      <item path="player/AdaptiveTrackSelectorBola.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="player/BaseTrackSelector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="player/BaseTrackSelector.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="player/Player.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -96,6 +115,10 @@
       <item path="player/PlayerListener.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="player/PlayerListener.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="player/ThroughputTrackSelector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="player/ThroughputTrackSelector.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="test/PlayerTester.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -148,7 +171,11 @@
       </item>
       <item path="player/AdaptiveTrackSelector.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="player/AdaptiveTrackSelector.h" ex="false" tool="3" flavor2="0">
+      <item path="player/AdaptiveTrackSelectorBola.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="player/BaseTrackSelector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="player/BaseTrackSelector.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="player/Player.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -157,6 +184,10 @@
       <item path="player/PlayerListener.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="player/PlayerListener.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="player/ThroughputTrackSelector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="player/ThroughputTrackSelector.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="test/PlayerTester.cpp" ex="false" tool="1" flavor2="0">
       </item>

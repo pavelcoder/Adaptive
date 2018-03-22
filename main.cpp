@@ -21,6 +21,8 @@
 #include "net/NetworkDownloader.h"
 #include "net/NetSpeedChange.h"
 #include "test/PlayerTester.h"
+#include "player/ThroughputTrackSelector.h"
+#include "player/AdaptiveTrackSelector.h"
 
 using namespace std;
 
@@ -103,12 +105,8 @@ vector<Video*>* getAllVideos(string path) {
     return all;
 }
 
-int main(int argc, char** argv) {
+void testTrackSelector(vector<vector<NetSpeedChange*>*>* netSpeedChanges, vector<Video*>* videos, BaseTrackSelector* trackSelector) {
     PlayerTester tester;
-   
-    vector<vector<NetSpeedChange*>*>* netSpeedChanges = readAllSpeedChanges("res/net/*");
-    vector<Video*>* videos = getAllVideos("res/video/*");
-    AdaptiveTrackSelector trackSelector;
     
     for( int i = 0; i < netSpeedChanges->size(); i++ ) {
         for( int j = 0; j < videos->size(); j++ ) {
@@ -116,7 +114,7 @@ int main(int argc, char** argv) {
             NetworkDownloader networkDownloader(changes);
             Video* video = videos->at(j);
             
-            Player player(&networkDownloader, video, &trackSelector);
+            Player player(&networkDownloader, video, trackSelector);
             player.addListener(&tester);
             player.play();
             player.removeListener(&tester);
@@ -124,6 +122,19 @@ int main(int argc, char** argv) {
     }
     
     tester.printResult();
+}
+
+int main(int argc, char** argv) {
+    vector<vector<NetSpeedChange*>*>* netSpeedChanges = readAllSpeedChanges("res/net/*");
+    vector<Video*>* videos = getAllVideos("res/video/*");
+    
+    printf(" === ThroughputTrackSelector ===\n");
+    ThroughputTrackSelector throughputTrackSelector;
+    testTrackSelector(netSpeedChanges, videos, &throughputTrackSelector);
+    
+    printf("=== AdaptiveTrackSelector ===\n");
+    AdaptiveTrackSelector adaptiveTrackSelector;
+    testTrackSelector(netSpeedChanges, videos, &adaptiveTrackSelector);
     
     fflush(stdout);
     return 0;

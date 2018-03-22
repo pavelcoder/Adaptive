@@ -19,10 +19,6 @@ long AdaptiveTrackSelector::getNextChunkBytesPerSecond(int chunkIndex, long play
     return video->getQualityAt(video->getQualityCount() - 1);
 }
 
-void AdaptiveTrackSelector::onVideoStarted(Video* video) {
-    this->video = video;
-}
-
 void AdaptiveTrackSelector::onBufferizationStart(int reason) {
 }
 
@@ -31,10 +27,6 @@ void AdaptiveTrackSelector::onBufferizationStop(int reason, long durationMs) {
 
 void AdaptiveTrackSelector::onChunkLoadError(Chunk chunk) {
 }
-
-void AdaptiveTrackSelector::onVideoStopped(Video* video, bool isSuccess) {
-}
-
 
 void AdaptiveTrackSelector::onStartBufferingChunk(Chunk* chunk) {
     

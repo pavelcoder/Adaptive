@@ -14,7 +14,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "AdaptiveTrackSelector.h"
+#include "BaseTrackSelector.h"
 #include "PlayerListener.h"
 #include "../net/NetworkDownloader.h"
 #include <stdio.h>
@@ -36,7 +36,7 @@ using namespace std;
 
 class Player {
 public:
-    Player(NetworkDownloader * networkDownloader, Video* video, AdaptiveTrackSelector* selector);
+    Player(NetworkDownloader * networkDownloader, Video* video, BaseTrackSelector* selector);
     ~Player();
     /* return total play millis
      */
@@ -46,7 +46,7 @@ public:
 private:
     NetworkDownloader* networkDownloader;
     Video* video;
-    AdaptiveTrackSelector* trackSelector;
+    BaseTrackSelector* trackSelector;
     
     long bufferizedMicros;
     long microsGoneFromVideoStart;

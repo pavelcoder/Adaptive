@@ -42,8 +42,10 @@ OBJECTFILES= \
 	${OBJECTDIR}/net/NetSpeedChange.o \
 	${OBJECTDIR}/net/NetworkDownloader.o \
 	${OBJECTDIR}/player/AdaptiveTrackSelector.o \
+	${OBJECTDIR}/player/BaseTrackSelector.o \
 	${OBJECTDIR}/player/Player.o \
 	${OBJECTDIR}/player/PlayerListener.o \
+	${OBJECTDIR}/player/ThroughputTrackSelector.o \
 	${OBJECTDIR}/test/PlayerTester.o
 
 
@@ -106,6 +108,11 @@ ${OBJECTDIR}/player/AdaptiveTrackSelector.o: player/AdaptiveTrackSelector.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/AdaptiveTrackSelector.o player/AdaptiveTrackSelector.cpp
 
+${OBJECTDIR}/player/BaseTrackSelector.o: player/BaseTrackSelector.cpp
+	${MKDIR} -p ${OBJECTDIR}/player
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/BaseTrackSelector.o player/BaseTrackSelector.cpp
+
 ${OBJECTDIR}/player/Player.o: player/Player.cpp
 	${MKDIR} -p ${OBJECTDIR}/player
 	${RM} "$@.d"
@@ -115,6 +122,11 @@ ${OBJECTDIR}/player/PlayerListener.o: player/PlayerListener.cpp
 	${MKDIR} -p ${OBJECTDIR}/player
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/PlayerListener.o player/PlayerListener.cpp
+
+${OBJECTDIR}/player/ThroughputTrackSelector.o: player/ThroughputTrackSelector.cpp
+	${MKDIR} -p ${OBJECTDIR}/player
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/ThroughputTrackSelector.o player/ThroughputTrackSelector.cpp
 
 ${OBJECTDIR}/test/PlayerTester.o: test/PlayerTester.cpp
 	${MKDIR} -p ${OBJECTDIR}/test

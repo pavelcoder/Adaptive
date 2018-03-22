@@ -16,15 +16,14 @@
 #include <ctime>
 #include "PlayerListener.h"
 
-Player::Player(NetworkDownloader *networkDownloader, Video *video, AdaptiveTrackSelector* selector) {
+Player::Player(NetworkDownloader *networkDownloader, Video *video, BaseTrackSelector* selector) {
     this->networkDownloader = networkDownloader;
     this->video = video;
-    trackSelector = new AdaptiveTrackSelector();
+    this->trackSelector = selector;
     listeners.push_back(trackSelector);
 }
 
 Player::~Player() {
-    delete trackSelector;
 }
 
 void Player::addListener(PlayerListener* listener) {

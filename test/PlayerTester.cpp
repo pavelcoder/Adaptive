@@ -64,10 +64,10 @@ void PlayerTester::printResult() {
     float sumAdaptability = 0;
     int bufferizations = 0;
     for( int i = 0; i < videoStats.size(); ++i ) {
-        sumAdaptability += videoStats[i].adaptability;
+        sumAdaptability += videoStats[i].adaptability; 
         bufferizations += videoStats[i].bufferizationEmptyBufferCount;
     }
-    printf("===========\r\nPlayed %d video.\r\nAdaptiveness = %.3g\r\nBufferization per video = %.3g\r\nVideo error because cant download chunk = %.2g%%", 
+    printf("Played %d video.\nAdaptiveness = %.3g\nBufferization per video = %.3g\nVideo error because cant download chunk = %.2g%%\n", 
             (int)videoStats.size(),
             sumAdaptability / videoStats.size(),
             (double)bufferizations / videoStats.size(),

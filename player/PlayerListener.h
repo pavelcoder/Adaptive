@@ -21,10 +21,11 @@ class PlayerListener {
     public: 
         PlayerListener();
         virtual void onVideoStarted(Video* video) = 0;
+        virtual void onVideoStopped(Video* video, bool isSuccess) = 0;
+        
         virtual void onBufferizationStart(int reason) = 0;
         virtual void onBufferizationStop(int reason, long durationMs) = 0;
         virtual void onChunkLoadError(Chunk chunk) = 0;
-        virtual void onVideoStopped(Video* video, bool isSuccess) = 0;
         
         virtual void onStartBufferingChunk(Chunk* chunk) = 0;
         virtual void onFinishBufferingChunk(Chunk* chunk, long durationMillis, long bytesRead, bool isSuccess) = 0;
