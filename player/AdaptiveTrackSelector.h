@@ -18,10 +18,15 @@
 #include "../model/Video.h"
 #include "BaseTrackSelector.h"
 
+#define MINIMUM_BUFFER_S 10
+#define MINIMUM_BUFFER_PER_BITRATE_LEVEL_S 2
+
 class AdaptiveTrackSelector: public BaseTrackSelector {
 public:
     AdaptiveTrackSelector();
     virtual long getNextChunkBytesPerSecond(int chunkIndex, long playbackPositionMs, long bufferSizeMs);
+private:    
+    long getQualityFromBufferLevel(long bufferLevel);
 };
 
 #endif /* ADAPTIVETRACKSELECTOR_H */

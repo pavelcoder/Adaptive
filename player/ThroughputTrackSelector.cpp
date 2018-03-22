@@ -22,7 +22,7 @@ ThroughputTrackSelector::ThroughputTrackSelector() {
 long ThroughputTrackSelector::getNextChunkBytesPerSecond(int chunkIndex, long playbackPositionMs, long bufferSizeMs) {
     int KBPerSecond = totalBytes * 1000 / (totalMillis + 1) / 1024 * NETWORK_FRACTION;
     long quality = video->getQualityAt(getIdealQualityIndex());
-    //printf("Chunk %d, speed = %d KBps, selected %d KBps\n", chunkIndex, KBPerSecond, quality / 1024);
+    //printf("Chunk %d, speed = %d KBps, selected %d KBps, position = %d sec, buffered %d sec\n", chunkIndex, KBPerSecond, quality / 1024, (int)playbackPositionMs / 1000, (int)bufferSizeMs / 1000);
     return quality;
 }
 

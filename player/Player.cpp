@@ -140,16 +140,16 @@ bool Player::readChunk(int chunkIndex) {
         if( (microsGoneFromVideoStart - startChunkMicros) / 1000 < CHUNK_TIMEOUT_MILLIS ) {
             long videoMicrosWasRead = bytesToReadNow * 1000 * 1000 / chunkByterate;
             bufferizedMicros += videoMicrosWasRead;
+            if(chunkFinished) {
+                break;
+            }
         } else {
             bufferizedMicros = video->chunkDurationMillis * 1000 * chunkIndex; //go to chunk start
+            //printf("Chunk %d load error. Play position = %ld, buffered to %ld. seconds gone = %ld\n", chunkIndex, playbackPositionMicros / 1000 / 1000, bufferizedMicros / 1000 / 1000, microsGoneFromVideoStart / 1000000);
             for(int i = 0; i < listeners.size(); ++i) {
                 listeners[i]->onFinishBufferingChunk(&chunk, (microsGoneFromVideoStart - startChunkMicros) / 1000, chunkBytesAlreadyRead, false);
             }
             return false;
-        }
-
-        if(chunkFinished) {
-            break;
         }
     }
 

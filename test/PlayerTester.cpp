@@ -81,7 +81,7 @@ void PlayerTester::printResult() {
             "Adaptiveness = %.3g\n"
             "Adaptation frequency = %.3g\n"
             "Bufferization per video = %.3g\n"
-            "Video error because cant download chunk = %.2g %%\n"
+            "Video error because cant download chunk = %.2f %%\n"
             "Chunk load error per video = %.3g\n", 
             (int)videoCount,
             sumAdaptability / videoCount,
