@@ -1422,7 +1422,6 @@ public:
   /** \brief Constructs a Reader allowing all features
    * for parsing.
    */
-  JSONCPP_DEPRECATED("Use CharReader and CharReaderBuilder instead") 
   Reader();
 
   /** \brief Constructs a Reader allowing the specified feature set

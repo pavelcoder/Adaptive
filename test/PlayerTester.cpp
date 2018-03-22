@@ -16,6 +16,7 @@
 #include <stdio.h>
 
 PlayerTester::PlayerTester() {
+    errorCount = 0;
 }
 
 void PlayerTester::onVideoStarted(Video* video) {
@@ -36,7 +37,8 @@ void PlayerTester::onBufferizationStop(int reason, long durationMs) {
 void PlayerTester::onChunkLoadError(Chunk chunk) {
 }
 
-void PlayerTester::onVideoStopped(Video* video) {
+void PlayerTester::onVideoStopped(Video* video, bool isSuccess) {
+    errorCount += isSuccess ? 0 : 1;
     float sumAdaptability = 0;
     for( int i = 0; i < segmentsAdaptability.size(); ++i ) {
         sumAdaptability += segmentsAdaptability[i];
@@ -51,7 +53,7 @@ void PlayerTester::onStartBufferingChunk(Chunk* chunk) {
     
 }
 
-void PlayerTester::onFinishBufferingChunk(Chunk* chunk, long durationMillis, bool isSuccess) {
+void PlayerTester::onFinishBufferingChunk(Chunk* chunk, long durationMillis, long bytesRead, bool isSuccess) {
     long networkBytesPerSec = chunk->size * 1000 / durationMillis;
     long chunkBytesPerSec = chunk->size / ( video->chunkDurationMillis / 1000 );
     float chunkAdaptiveness = ((float)chunkBytesPerSec) / min( networkBytesPerSec, video->getMaxQualityBytesPerSecond() );
@@ -65,8 +67,9 @@ void PlayerTester::printResult() {
         sumAdaptability += videoStats[i].adaptability;
         bufferizations += videoStats[i].bufferizationEmptyBufferCount;
     }
-    printf("===========\r\nPlayed %d video.\r\nAdaptiveness = %.3f\r\nBufferization per video = %.3f", 
+    printf("===========\r\nPlayed %d video.\r\nAdaptiveness = %.3g\r\nBufferization per video = %.3g\r\nVideo error because cant download chunk = %.2g%%", 
             (int)videoStats.size(),
             sumAdaptability / videoStats.size(),
-            (float)bufferizations / videoStats.size());
+            (double)bufferizations / videoStats.size(),
+            (double)errorCount * 100 / videoStats.size());
 }

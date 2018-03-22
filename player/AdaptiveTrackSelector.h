@@ -26,10 +26,10 @@ public:
     virtual void onBufferizationStart(int reason);
     virtual void onBufferizationStop(int reason, long durationMs);
     virtual void onChunkLoadError(Chunk chunk);
-    virtual void onVideoStopped(Video* video);
+    virtual void onVideoStopped(Video* video, bool isSuccess);
     
     virtual void onStartBufferingChunk(Chunk* chunk);
-    virtual void onFinishBufferingChunk(Chunk* chunk, long durationMillis, bool isSuccess);
+    virtual void onFinishBufferingChunk(Chunk* chunk, long durationMillis, long bytesRead, bool isSuccess);
 
 private:
     Video* video;

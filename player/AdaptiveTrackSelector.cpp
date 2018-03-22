@@ -32,7 +32,7 @@ void AdaptiveTrackSelector::onBufferizationStop(int reason, long durationMs) {
 void AdaptiveTrackSelector::onChunkLoadError(Chunk chunk) {
 }
 
-void AdaptiveTrackSelector::onVideoStopped(Video* video) {
+void AdaptiveTrackSelector::onVideoStopped(Video* video, bool isSuccess) {
 }
 
 
@@ -40,6 +40,6 @@ void AdaptiveTrackSelector::onStartBufferingChunk(Chunk* chunk) {
     
 }
 
-void AdaptiveTrackSelector::onFinishBufferingChunk(Chunk* chunk, long durationMillis, bool isSuccess) {
+void AdaptiveTrackSelector::onFinishBufferingChunk(Chunk* chunk, long durationMillis, long bytesRead, bool isSuccess) {
     
 }

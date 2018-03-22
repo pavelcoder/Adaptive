@@ -26,6 +26,8 @@ using namespace std;
 #define VIDEO_FOR_PLAY_ATOM_MILLIS 1000
 #define MIN_BUFFER_FOR_PLAY_MILLIS 4000
 
+#define CHUNK_TIMEOUT_MILLIS 16000
+
 #define BUFFERING_REASON_NONE -1
 #define BUFFERING_REASON_STARTING 0
 #define BUFFERING_REASON_SEEK 1
@@ -59,6 +61,7 @@ private:
     
     void playVideoIfTimeCome();
     void setBufferingState(bool isBuffering, int reason);
+    bool readChunk(int chunkIndex);
 };
 
 #endif /* PLAYER_H */
