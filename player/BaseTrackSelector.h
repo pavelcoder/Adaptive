@@ -27,6 +27,7 @@ public:
     virtual void onBufferizationStart(int reason);
     virtual void onBufferizationStop(int reason, long durationMs);
     virtual void onChunkLoadError(Chunk chunk);
+    virtual void onDownloadTrackChanged(long prevByterate, long newByterate);
     
     virtual void onStartBufferingChunk(Chunk* chunk);
     virtual void onFinishBufferingChunk(Chunk* chunk, long durationMillis, long bytesRead, bool isSuccess);

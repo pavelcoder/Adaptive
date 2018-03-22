@@ -34,6 +34,8 @@ using namespace std;
 #define BUFFERING_REASON_QUALITY_CHANGE 2
 #define BUFFERING_REASON_BUFFER_EMPTY 3
 
+#define NO_QUALITY 0
+
 class Player {
 public:
     Player(NetworkDownloader * networkDownloader, Video* video, BaseTrackSelector* selector);
@@ -56,6 +58,7 @@ private:
     bool isBuffering;
     int bufferingReason;
     long bufferizationStartTs;
+    long lastSelectedQuality;
     
     vector<PlayerListener*> listeners;
     

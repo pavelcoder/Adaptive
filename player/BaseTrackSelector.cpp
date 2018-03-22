@@ -37,6 +37,10 @@ void BaseTrackSelector::onChunkLoadError(Chunk chunk) {
     
 }
 
+void BaseTrackSelector::onDownloadTrackChanged(long prevByterate, long newByterate) {
+    
+}
+
 void BaseTrackSelector::onStartBufferingChunk(Chunk* chunk) {
     
 }

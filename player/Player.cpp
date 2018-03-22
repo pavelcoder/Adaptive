@@ -21,6 +21,7 @@ Player::Player(NetworkDownloader *networkDownloader, Video *video, BaseTrackSele
     this->video = video;
     this->trackSelector = selector;
     listeners.push_back(trackSelector);
+    lastSelectedQuality = NO_QUALITY;
 }
 
 Player::~Player() {
@@ -108,47 +109,52 @@ void Player::setBufferingState(bool isBuffering, int reason) {
 
 bool Player::readChunk(int chunkIndex) {
     long chunkByterate = trackSelector->getNextChunkBytesPerSecond(chunkIndex, playbackPositionMicros / 1000, (bufferizedMicros - playbackPositionMicros) / 1000);
-        long chunkTotalBytes = chunkByterate * video->chunkDurationMillis / 1000;
-        long chunkBytesAlreadyRead = 0;
-        Chunk chunk = Chunk(chunkTotalBytes, chunkIndex);
+    if( lastSelectedQuality != chunkByterate ) {
         for(int i = 0; i < listeners.size(); ++i) {
-            listeners[i]->onStartBufferingChunk(&chunk);
+           listeners[i]->onDownloadTrackChanged(lastSelectedQuality, chunkByterate);
         }
-        long startChunkMicros = microsGoneFromVideoStart;
-        
-        while(true) {
-            playVideoIfTimeCome();
-            
-            long bytesInChunkLeft = chunkTotalBytes - chunkBytesAlreadyRead;
-            long bytesToReadNow = DOWNLOAD_BUFFER_SIZE;
-            bool chunkFinished;
-            if( bytesToReadNow > bytesInChunkLeft ) {
-                bytesToReadNow = bytesInChunkLeft;
-                chunkFinished = true;
-            } else {
-                chunkFinished = false;
-            }
-            
-            chunkBytesAlreadyRead += bytesToReadNow;
-            microsGoneFromVideoStart += networkDownloader->readChunk(bytesToReadNow);
-            if( (microsGoneFromVideoStart - startChunkMicros) / 1000 < CHUNK_TIMEOUT_MILLIS ) {
-                long videoMicrosWasRead = bytesToReadNow * 1000 * 1000 / chunkByterate;
-                bufferizedMicros += videoMicrosWasRead;
-            } else {
-                bufferizedMicros = video->chunkDurationMillis * 1000 * chunkIndex; //go to chunk start
-                for(int i = 0; i < listeners.size(); ++i) {
-                    listeners[i]->onFinishBufferingChunk(&chunk, (microsGoneFromVideoStart - startChunkMicros) / 1000, chunkBytesAlreadyRead, false);
-                }
-                return false;
-            }
-           
-            if(chunkFinished) {
-                break;
-            }
+    }
+    long chunkTotalBytes = chunkByterate * video->chunkDurationMillis / 1000;
+    long chunkBytesAlreadyRead = 0;
+    Chunk chunk = Chunk(chunkTotalBytes, chunkIndex);
+    for(int i = 0; i < listeners.size(); ++i) {
+        listeners[i]->onStartBufferingChunk(&chunk);
+    }
+    long startChunkMicros = microsGoneFromVideoStart;
+
+    while(true) {
+        playVideoIfTimeCome();
+
+        long bytesInChunkLeft = chunkTotalBytes - chunkBytesAlreadyRead;
+        long bytesToReadNow = DOWNLOAD_BUFFER_SIZE;
+        bool chunkFinished;
+        if( bytesToReadNow > bytesInChunkLeft ) {
+            bytesToReadNow = bytesInChunkLeft;
+            chunkFinished = true;
+        } else {
+            chunkFinished = false;
         }
-        
-        for(int i = 0; i < listeners.size(); ++i) {
-            listeners[i]->onFinishBufferingChunk(&chunk, (microsGoneFromVideoStart - startChunkMicros) / 1000, chunkTotalBytes, true);
+
+        chunkBytesAlreadyRead += bytesToReadNow;
+        microsGoneFromVideoStart += networkDownloader->readChunk(bytesToReadNow);
+        if( (microsGoneFromVideoStart - startChunkMicros) / 1000 < CHUNK_TIMEOUT_MILLIS ) {
+            long videoMicrosWasRead = bytesToReadNow * 1000 * 1000 / chunkByterate;
+            bufferizedMicros += videoMicrosWasRead;
+        } else {
+            bufferizedMicros = video->chunkDurationMillis * 1000 * chunkIndex; //go to chunk start
+            for(int i = 0; i < listeners.size(); ++i) {
+                listeners[i]->onFinishBufferingChunk(&chunk, (microsGoneFromVideoStart - startChunkMicros) / 1000, chunkBytesAlreadyRead, false);
+            }
+            return false;
         }
-        return true;
+
+        if(chunkFinished) {
+            break;
+        }
+    }
+
+    for(int i = 0; i < listeners.size(); ++i) {
+        listeners[i]->onFinishBufferingChunk(&chunk, (microsGoneFromVideoStart - startChunkMicros) / 1000, chunkTotalBytes, true);
+    }
+    return true;
 }

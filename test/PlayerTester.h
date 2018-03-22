@@ -35,6 +35,7 @@ public:
     virtual void onBufferizationStop(int reason, long durationMs);
     virtual void onChunkLoadError(Chunk chunk);
     virtual void onVideoStopped(Video* video, bool isSuccess);
+    virtual void onDownloadTrackChanged(long prevByterate, long newByterate);
     
     virtual void onStartBufferingChunk(Chunk* chunk);
     virtual void onFinishBufferingChunk(Chunk* chunk, long durationMillis, long bytesRead, bool isSuccess);
@@ -47,6 +48,8 @@ private:
     vector<float> segmentsAdaptability;
     int bufferizationCount;
     int errorCount;
+    int chunkLoadFailure;
+    int adaptationsCount;
 };
 
 #endif /* PLAYERTESTER_H */
