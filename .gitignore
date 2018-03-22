@@ -33,3 +33,8 @@
 
 build/
 dist/
+
+Index/
+DerivedData/
+Adaptive.xcodeproj/
+.DS_Store
