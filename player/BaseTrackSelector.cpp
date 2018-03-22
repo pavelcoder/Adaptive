@@ -21,6 +21,26 @@ void BaseTrackSelector::onVideoStarted(Video* video) {
     this->video = video;
 }
 
-
 void BaseTrackSelector::onVideoStopped(Video* video, bool isSuccess) {
+}
+
+
+void BaseTrackSelector::onBufferizationStart(int reason) {
+    
+}
+
+void BaseTrackSelector::onBufferizationStop(int reason, long durationMs) {
+    
+}
+
+void BaseTrackSelector::onChunkLoadError(Chunk chunk) {
+    
+}
+
+void BaseTrackSelector::onStartBufferingChunk(Chunk* chunk) {
+    
+}
+
+void BaseTrackSelector::onFinishBufferingChunk(Chunk* chunk, long durationMillis, long bytesRead, bool isSuccess) {
+    
 }

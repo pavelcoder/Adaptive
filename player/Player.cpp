@@ -57,7 +57,7 @@ long Player::play() {
             if( wasRead ) break;
         }
         networkErrorDetected = ! wasRead;
-        if( ! networkErrorDetected ) {
+        if( networkErrorDetected ) {
             break;
         }
     }

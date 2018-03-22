@@ -1,0 +1,10 @@
+[
+  {
+    "speedKBps": 100,
+    "duration": 20
+  },
+  {
+    "speedKBps": 1000,
+    "duration": 30
+  }
+]

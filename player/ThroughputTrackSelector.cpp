@@ -12,21 +12,18 @@
  */
 
 #include "ThroughputTrackSelector.h"
+#include <stdio.h>
 
 ThroughputTrackSelector::ThroughputTrackSelector() {
+    totalBytes = 0;
+    totalMillis = 0;
 }
 
 long ThroughputTrackSelector::getNextChunkBytesPerSecond(int chunkIndex, long playbackPositionMs, long bufferSizeMs) {
-    return video->getQualityAt(0);
-}
-
-void ThroughputTrackSelector::onBufferizationStart(int reason) {
-}
-
-void ThroughputTrackSelector::onBufferizationStop(int reason, long durationMs) {
-}
-
-void ThroughputTrackSelector::onChunkLoadError(Chunk chunk) {
+    int KBPerSecond = totalBytes * 1000 / (totalMillis + 1) / 1024 * NETWORK_FRACTION;
+    long quality = video->getQualityAt(getIdealQualityIndex());
+    //printf("Chunk %d, speed = %d KBps, selected %d KBps\n", chunkIndex, KBPerSecond, quality / 1024);
+    return quality;
 }
 
 void ThroughputTrackSelector::onStartBufferingChunk(Chunk* chunk) {
@@ -34,5 +31,26 @@ void ThroughputTrackSelector::onStartBufferingChunk(Chunk* chunk) {
 }
 
 void ThroughputTrackSelector::onFinishBufferingChunk(Chunk* chunk, long durationMillis, long bytesRead, bool isSuccess) {
-    
+    totalBytes += bytesRead;
+    totalMillis += durationMillis;
+}
+
+void ThroughputTrackSelector::onVideoStarted(Video* video) {
+    BaseTrackSelector::onVideoStarted(video);
+    totalBytes = 0;
+    totalMillis = 0;
+}
+
+int ThroughputTrackSelector::getIdealQualityIndex() {
+    if( totalMillis == 0 ) return 0;
+    long bytesPerSecond = totalBytes * 1000 / totalMillis * NETWORK_FRACTION;
+    int lastIndex = 0;
+    for( int i = 0; i < video->getQualityCount(); i++ ) {
+        if( video->getQualityAt(i) < bytesPerSecond ) {
+            lastIndex = i;
+        } else {
+            return lastIndex;
+        }
+    } 
+    return lastIndex;
 }

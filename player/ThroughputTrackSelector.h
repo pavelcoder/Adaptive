@@ -14,6 +14,8 @@
 #ifndef THROUGHPUTTRACKSELECTOR_H
 #define THROUGHPUTTRACKSELECTOR_H
 
+#define NETWORK_FRACTION 0.75f
+
 #include "BaseTrackSelector.h"
 
 class ThroughputTrackSelector : public BaseTrackSelector {
@@ -21,14 +23,14 @@ public:
     ThroughputTrackSelector();
     virtual long getNextChunkBytesPerSecond(int chunkIndex, long playbackPositionMs, long bufferSizeMs);
     
-    virtual void onBufferizationStart(int reason);
-    virtual void onBufferizationStop(int reason, long durationMs);
-    virtual void onChunkLoadError(Chunk chunk);
-    
+    virtual void onVideoStarted(Video* video);
     virtual void onStartBufferingChunk(Chunk* chunk);
     virtual void onFinishBufferingChunk(Chunk* chunk, long durationMillis, long bytesRead, bool isSuccess);
 private:
-
+    long totalBytes;
+    long totalMillis;
+    
+    int getIdealQualityIndex();
 };
 
 #endif /* THROUGHPUTTRACKSELECTOR_H */

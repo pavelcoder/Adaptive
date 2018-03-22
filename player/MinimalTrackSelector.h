@@ -5,24 +5,25 @@
  */
 
 /* 
- * File:   AdaptiveTrackSelector.h
+ * File:   MinimalTrackSelector.h
  * Author: pavel
  *
- * Created on 14 марта 2018 г., 20:31
+ * Created on 22 марта 2018 г., 15:30
  */
 
-#ifndef ADAPTIVETRACKSELECTOR_H
-#define ADAPTIVETRACKSELECTOR_H
+#ifndef MINIMALTRACKSELECTOR_H
+#define MINIMALTRACKSELECTOR_H
 
-#include "PlayerListener.h"
-#include "../model/Video.h"
 #include "BaseTrackSelector.h"
 
-class AdaptiveTrackSelector: public BaseTrackSelector {
+class MinimalTrackSelector : public BaseTrackSelector {
 public:
-    AdaptiveTrackSelector();
+    MinimalTrackSelector();
     virtual long getNextChunkBytesPerSecond(int chunkIndex, long playbackPositionMs, long bufferSizeMs);
+
+private:
+
 };
 
-#endif /* ADAPTIVETRACKSELECTOR_H */
+#endif /* MINIMALTRACKSELECTOR_H */
 

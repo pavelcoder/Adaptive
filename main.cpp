@@ -23,6 +23,7 @@
 #include "test/PlayerTester.h"
 #include "player/ThroughputTrackSelector.h"
 #include "player/AdaptiveTrackSelector.h"
+#include "player/MinimalTrackSelector.h"
 
 using namespace std;
 
@@ -105,12 +106,12 @@ vector<Video*>* getAllVideos(string path) {
     return all;
 }
 
-void testTrackSelector(vector<vector<NetSpeedChange*>*>* netSpeedChanges, vector<Video*>* videos, BaseTrackSelector* trackSelector) {
+void testTrackSelector(vector<vector<NetSpeedChange*>*>* netFiles, vector<Video*>* videos, BaseTrackSelector* trackSelector) {
     PlayerTester tester;
     
-    for( int i = 0; i < netSpeedChanges->size(); i++ ) {
+    for( int i = 0; i < netFiles->size(); i++ ) {
         for( int j = 0; j < videos->size(); j++ ) {
-            vector<NetSpeedChange*>* changes = netSpeedChanges->at(i);
+            vector<NetSpeedChange*>* changes = netFiles->at(i);
             NetworkDownloader networkDownloader(changes);
             Video* video = videos->at(j);
             
@@ -125,16 +126,20 @@ void testTrackSelector(vector<vector<NetSpeedChange*>*>* netSpeedChanges, vector
 }
 
 int main(int argc, char** argv) {
-    vector<vector<NetSpeedChange*>*>* netSpeedChanges = readAllSpeedChanges("res/net/*");
+    vector<vector<NetSpeedChange*>*>* netFiles = readAllSpeedChanges("res/net/*");
     vector<Video*>* videos = getAllVideos("res/video/*");
+    
+    printf(" === MinimalTrackSelector ===\n");
+    MinimalTrackSelector minimalTrackSelector;
+    testTrackSelector(netFiles, videos, &minimalTrackSelector);
     
     printf(" === ThroughputTrackSelector ===\n");
     ThroughputTrackSelector throughputTrackSelector;
-    testTrackSelector(netSpeedChanges, videos, &throughputTrackSelector);
+    testTrackSelector(netFiles, videos, &throughputTrackSelector);
     
     printf("=== AdaptiveTrackSelector ===\n");
     AdaptiveTrackSelector adaptiveTrackSelector;
-    testTrackSelector(netSpeedChanges, videos, &adaptiveTrackSelector);
+    testTrackSelector(netFiles, videos, &adaptiveTrackSelector);
     
     fflush(stdout);
     return 0;

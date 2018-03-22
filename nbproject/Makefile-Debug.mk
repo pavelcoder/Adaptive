@@ -43,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/net/NetworkDownloader.o \
 	${OBJECTDIR}/player/AdaptiveTrackSelector.o \
 	${OBJECTDIR}/player/BaseTrackSelector.o \
+	${OBJECTDIR}/player/MinimalTrackSelector.o \
 	${OBJECTDIR}/player/Player.o \
 	${OBJECTDIR}/player/PlayerListener.o \
 	${OBJECTDIR}/player/ThroughputTrackSelector.o \
@@ -112,6 +113,11 @@ ${OBJECTDIR}/player/BaseTrackSelector.o: player/BaseTrackSelector.cpp
 	${MKDIR} -p ${OBJECTDIR}/player
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/BaseTrackSelector.o player/BaseTrackSelector.cpp
+
+${OBJECTDIR}/player/MinimalTrackSelector.o: player/MinimalTrackSelector.cpp
+	${MKDIR} -p ${OBJECTDIR}/player
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/player/MinimalTrackSelector.o player/MinimalTrackSelector.cpp
 
 ${OBJECTDIR}/player/Player.o: player/Player.cpp
 	${MKDIR} -p ${OBJECTDIR}/player
