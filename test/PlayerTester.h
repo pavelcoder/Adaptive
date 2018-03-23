@@ -23,6 +23,8 @@ using namespace std;
 struct VIDEO_STATS {
     float adaptability;
     int bufferizationEmptyBufferCount;
+    int qualityChangedCount;
+    int chunkLoadFailureCount;
     //float adaptationFrequency;
 };
 

@@ -52,8 +52,17 @@ void PlayerTester::onVideoStopped(Video* video, bool isSuccess) {
         sumAdaptability += segmentsAdaptability[i];
     }
     VIDEO_STATS stats;
-    stats.adaptability = sumAdaptability / segmentsAdaptability.size();
+    if(isSuccess)
+    {
+        stats.adaptability = sumAdaptability / segmentsAdaptability.size();
+    }
+    else
+    {
+        stats.adaptability = 0;
+    }
     stats.bufferizationEmptyBufferCount = bufferizationCount;
+    stats.qualityChangedCount = adaptationsCount;
+    stats.chunkLoadFailureCount = chunkLoadFailure;
     videoStats.push_back(stats);
 }
 
@@ -66,16 +75,27 @@ void PlayerTester::onFinishBufferingChunk(Chunk* chunk, long durationMillis, lon
     long networkBytesPerSec = chunk->size * 1000 / durationMillis;
     long chunkBytesPerSec = chunk->size / ( video->chunkDurationMillis / 1000 );
     float chunkAdaptiveness = ((float)chunkBytesPerSec) / min( networkBytesPerSec, video->getMaxQualityBytesPerSecond() );
-    segmentsAdaptability.push_back( chunkAdaptiveness );
+    if(isSuccess)
+    {
+        segmentsAdaptability.push_back( chunkAdaptiveness );
+    }
+    else
+    {
+        segmentsAdaptability.push_back( 0 );
+    }
 }
 
 void PlayerTester::printResult() {
     double videoCount = videoStats.size();
     float sumAdaptability = 0;
     int bufferizations = 0;
+    int sumAdaptations = 0;
+    int sumChunkLoadFailure = 0;
     for( int i = 0; i < videoStats.size(); ++i ) {
         sumAdaptability += videoStats[i].adaptability; 
         bufferizations += videoStats[i].bufferizationEmptyBufferCount;
+        sumAdaptations += videoStats[i].qualityChangedCount;
+        sumChunkLoadFailure += videoStats[i].chunkLoadFailureCount;
     }
     printf("Played %d video.\n"
             "Adaptiveness = %.3g\n"
@@ -84,9 +104,9 @@ void PlayerTester::printResult() {
             "Video error because cant download chunk = %.2f %%\n"
             "Chunk load error per video = %.3g\n", 
             (int)videoCount,
-            sumAdaptability / videoCount,
-            (double)adaptationsCount / videoCount,
+            sumAdaptability / (videoCount - errorCount),
+            (double)sumAdaptations / videoCount,
             (double)bufferizations / videoCount,
             (double)errorCount * 100 / videoCount, 
-            (double)chunkLoadFailure / videoCount);
+            (double)sumChunkLoadFailure / videoCount);
 }

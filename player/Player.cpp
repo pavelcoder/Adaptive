@@ -113,6 +113,7 @@ bool Player::readChunk(int chunkIndex) {
         for(int i = 0; i < listeners.size(); ++i) {
            listeners[i]->onDownloadTrackChanged(lastSelectedQuality, chunkByterate);
         }
+        lastSelectedQuality = chunkByterate;
     }
     long chunkTotalBytes = chunkByterate * video->chunkDurationMillis / 1000;
     long chunkBytesAlreadyRead = 0;
