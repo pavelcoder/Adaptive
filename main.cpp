@@ -126,8 +126,8 @@ void testTrackSelector(vector<vector<NetSpeedChange*>*>* netFiles, vector<Video*
 }
 
 int main(int argc, char** argv) {
-    vector<vector<NetSpeedChange*>*>* netFiles = readAllSpeedChanges("/Users/Sako/Работа/Rutube/Adaptive/res/net/3Gw*");
-    vector<Video*>* videos = getAllVideos("/Users/Sako/Работа/Rutube/Adaptive/res/video/2qualities*");
+    vector<vector<NetSpeedChange*>*>* netFiles = readAllSpeedChanges("res/net/3Gw*");
+    vector<Video*>* videos = getAllVideos("res/video/2qualities*");
     
     printf(" === MinimalTrackSelector ===\n");
     MinimalTrackSelector minimalTrackSelector;
