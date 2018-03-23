@@ -21,7 +21,7 @@ void BaseTrackSelector::onVideoStarted(Video* video) {
     this->video = video;
 }
 
-void BaseTrackSelector::onVideoStopped(Video* video, bool isSuccess) {
+void BaseTrackSelector::onVideoStopped(Video* video, int chunksPlayed, bool isSuccess) {
 }
 
 

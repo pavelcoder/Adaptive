@@ -51,10 +51,11 @@ long Player::play() {
     }
     setBufferingState(true, BUFFERING_REASON_STARTING);
     bool networkErrorDetected = false;
-    for( int i = 0; i < video->getChunkCount(); i++ ) { 
+    int chunkNumber = 0;
+    for( chunkNumber = 0; chunkNumber < video->getChunkCount(); chunkNumber++ ) { 
         bool wasRead = false;
         for( int tries = 0; tries < 3; tries++ ) {
-            wasRead = readChunk(i);
+            wasRead = readChunk(chunkNumber);
             if( wasRead ) break;
         }
         networkErrorDetected = ! wasRead;
@@ -62,8 +63,9 @@ long Player::play() {
             break;
         }
     }
+    int chunksPlayed = networkErrorDetected ? chunkNumber : (chunkNumber + 1);
     for(int i = 0; i < listeners.size(); ++i) {
-        listeners[i]->onVideoStopped(video, ! networkErrorDetected);
+        listeners[i]->onVideoStopped(video, chunksPlayed, ! networkErrorDetected);
     }
     return microsGoneFromVideoStart;
 }

@@ -22,7 +22,7 @@ public:
     virtual long getNextChunkBytesPerSecond(int chunkIndex, long playbackPositionMs, long bufferSizeMs) = 0;
     
     virtual void onVideoStarted(Video* video);
-    virtual void onVideoStopped(Video* video, bool isSuccess);
+    virtual void onVideoStopped(Video* video, int chunksPlayed, bool isSuccess);
         
     virtual void onBufferizationStart(int reason);
     virtual void onBufferizationStop(int reason, long durationMs);

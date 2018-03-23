@@ -45,7 +45,7 @@ void PlayerTester::onDownloadTrackChanged(long prevByterate, long newByterate) {
     }
 }
 
-void PlayerTester::onVideoStopped(Video* video, bool isSuccess) {
+void PlayerTester::onVideoStopped(Video* video, int chunksPlayed, bool isSuccess) {
     errorCount += isSuccess ? 0 : 1;
     float sumAdaptability = 0;
     for( int i = 0; i < segmentsAdaptability.size(); ++i ) {
@@ -61,8 +61,8 @@ void PlayerTester::onVideoStopped(Video* video, bool isSuccess) {
         stats.adaptability = 0;
     }
     stats.bufferizationEmptyBufferCount = bufferizationCount;
-    stats.qualityChangedCount = adaptationsCount;
     stats.chunkLoadFailureCount = chunkLoadFailure;
+    stats.adaptationFrequency = chunksPlayed == 0 ? 0 : adaptationsCount / (float)chunksPlayed;
     videoStats.push_back(stats);
 }
 
@@ -88,13 +88,13 @@ void PlayerTester::onFinishBufferingChunk(Chunk* chunk, long durationMillis, lon
 void PlayerTester::printResult() {
     double videoCount = videoStats.size();
     float sumAdaptability = 0;
-    int bufferizations = 0;
-    int sumAdaptations = 0;
+    double bufferizations = 0;
+    double sumAdaptationsFrequency = 0;
     int sumChunkLoadFailure = 0;
     for( int i = 0; i < videoStats.size(); ++i ) {
         sumAdaptability += videoStats[i].adaptability; 
         bufferizations += videoStats[i].bufferizationEmptyBufferCount;
-        sumAdaptations += videoStats[i].qualityChangedCount;
+        sumAdaptationsFrequency += videoStats[i].adaptationFrequency;
         sumChunkLoadFailure += videoStats[i].chunkLoadFailureCount;
     }
     printf("Played %d video.\n"
@@ -105,7 +105,7 @@ void PlayerTester::printResult() {
             "Chunk load error per video = %.3g\n", 
             (int)videoCount,
             sumAdaptability / (videoCount - errorCount),
-            (double)sumAdaptations / videoCount,
+            (double)sumAdaptationsFrequency / videoCount,
             (double)bufferizations / videoCount,
             (double)errorCount * 100 / videoCount, 
             (double)sumChunkLoadFailure / videoCount);

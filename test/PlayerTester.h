@@ -22,8 +22,8 @@ using namespace std;
 
 struct VIDEO_STATS {
     float adaptability;
+    float adaptationFrequency;
     int bufferizationEmptyBufferCount;
-    int qualityChangedCount;
     int chunkLoadFailureCount;
     //float adaptationFrequency;
 };
@@ -36,7 +36,7 @@ public:
     virtual void onBufferizationStart(int reason);
     virtual void onBufferizationStop(int reason, long durationMs);
     virtual void onChunkLoadError(Chunk chunk);
-    virtual void onVideoStopped(Video* video, bool isSuccess);
+    virtual void onVideoStopped(Video* video, int chunksPlayed, bool isSuccess);
     virtual void onDownloadTrackChanged(long prevByterate, long newByterate);
     
     virtual void onStartBufferingChunk(Chunk* chunk);

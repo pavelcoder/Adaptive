@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/json/jsoncpp.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/model/Chunk.o \
+	${OBJECTDIR}/model/PlayedVideo.o \
 	${OBJECTDIR}/model/Video.o \
 	${OBJECTDIR}/net/NetSpeedChange.o \
 	${OBJECTDIR}/net/NetworkDownloader.o \
@@ -88,6 +89,11 @@ ${OBJECTDIR}/model/Chunk.o: model/Chunk.cpp
 	${MKDIR} -p ${OBJECTDIR}/model
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/model/Chunk.o model/Chunk.cpp
+
+${OBJECTDIR}/model/PlayedVideo.o: model/PlayedVideo.cpp
+	${MKDIR} -p ${OBJECTDIR}/model
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/model/PlayedVideo.o model/PlayedVideo.cpp
 
 ${OBJECTDIR}/model/Video.o: model/Video.cpp
 	${MKDIR} -p ${OBJECTDIR}/model

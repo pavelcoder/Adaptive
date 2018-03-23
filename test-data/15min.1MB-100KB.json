@@ -1,0 +1,18 @@
+{
+    "chunkCount": 112,
+    "kylobyterates": [
+	100, 150, 200, 1000
+    ],
+    "net": [
+        {
+          "speedKBps": 1000,
+          "duration": 5
+        },
+        {
+          "speedKBps": 100,
+          "duration": 300
+        }
+    ]
+}
+
+
