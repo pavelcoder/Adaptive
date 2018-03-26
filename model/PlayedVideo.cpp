@@ -25,10 +25,12 @@ PlayedVideo::PlayedVideo() {
     netSpeedChanges = new vector<NetSpeedChange*>();
 }
 
+Json::Value root;
 PlayedVideo* PlayedVideo::readFromFile(string filename) {
+    printf("Rading %s\n", filename.c_str());
     PlayedVideo *playedVideo = new PlayedVideo();
     Json::Reader reader;
-    Json::Value root;
+    
     string content = getFileString(filename);
 
     bool parsingSuccessful = reader.parse( content, root );

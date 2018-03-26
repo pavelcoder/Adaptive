@@ -1,0 +1,1436 @@
+{
+    "bufferizationCount": 0,
+    "chunkCount": 184,
+    "chunkCountStartedDownload": 0,
+    "chunkCountSuccessfullyDownloaded": 0,
+    "events": [
+        {
+            "millisFromVideoStart": 283,
+            "name": "onTrackSelected isAuto = true, bitrate = 93"
+        },
+        {
+            "millisFromVideoStart": 662,
+            "name": "Bufferization end reason = STARTING, quality change count = 1"
+        },
+        {
+            "millisFromVideoStart": 1932,
+            "name": "Paused"
+        },
+        {
+            "millisFromVideoStart": 2822,
+            "name": "Resumed"
+        },
+        {
+            "millisFromVideoStart": 5782,
+            "name": "onTrackSelected isAuto = true, bitrate = 258"
+        },
+        {
+            "millisFromVideoStart": 6000,
+            "name": "Seek to 257140"
+        },
+        {
+            "millisFromVideoStart": 6036,
+            "name": "Bufferization start reason = SEEK"
+        },
+        {
+            "millisFromVideoStart": 6119,
+            "name": "Seek to 253903"
+        },
+        {
+            "millisFromVideoStart": 10724,
+            "name": "Bufferization end reason = SEEK, quality change count = 0"
+        },
+        {
+            "millisFromVideoStart": 11529,
+            "name": "Seek to 480459"
+        },
+        {
+            "millisFromVideoStart": 11555,
+            "name": "Bufferization start reason = SEEK"
+        },
+        {
+            "millisFromVideoStart": 15030,
+            "name": "Bufferization end reason = SEEK, quality change count = 0"
+        },
+        {
+            "millisFromVideoStart": 18404,
+            "name": "Seek to 627720"
+        },
+        {
+            "millisFromVideoStart": 18431,
+            "name": "Bufferization start reason = SEEK"
+        },
+        {
+            "millisFromVideoStart": 18439,
+            "name": "Seek to 625328"
+        },
+        {
+            "millisFromVideoStart": 30627,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/YU0H88cUzoy0J7gnUU0Bcg/1522040483/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag79Num78.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 42463,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/YU0H88cUzoy0J7gnUU0Bcg/1522040483/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag79Num78.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:203)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: timeout\n\tat com.android.okhttp.okio.Okio$3.newTimeoutException(Okio.java:212)\n\tat com.android.okhttp.okio.AsyncTimeout.exit(AsyncTimeout.java:261)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:215)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)\n\tat com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)\n\tat com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)\n\tat com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)\n\tat com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:907)\n\tat com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:783)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:463)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:405)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:521)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:200)\n\t... 7 more\nCaused by: java.net.SocketException: Socket closed\n\tat java.net.SocketInputStream.socketRead0(Native Method)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:151)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:120)\n\tat com.android.okhttp.okio.Okio$2.read(Okio.java:136)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)\n\t... 18 more\n"
+        },
+        {
+            "millisFromVideoStart": 46455,
+            "name": "Bufferization end reason = SEEK, quality change count = 0"
+        },
+        {
+            "millisFromVideoStart": 46689,
+            "name": "onTrackSelected isAuto = true, bitrate = 93"
+        },
+        {
+            "millisFromVideoStart": 48690,
+            "name": "Seek to 530625"
+        },
+        {
+            "millisFromVideoStart": 48716,
+            "name": "Bufferization start reason = SEEK"
+        },
+        {
+            "millisFromVideoStart": 49735,
+            "name": "Seek to 571081"
+        },
+        {
+            "millisFromVideoStart": 49768,
+            "name": "Seek to 568654"
+        },
+        {
+            "millisFromVideoStart": 50286,
+            "name": "Seek to 645521"
+        },
+        {
+            "millisFromVideoStart": 54445,
+            "name": "Bufferization end reason = SEEK, quality change count = 0"
+        },
+        {
+            "millisFromVideoStart": 56500,
+            "name": "Seek to 655230"
+        },
+        {
+            "millisFromVideoStart": 56517,
+            "name": "Seek to 653406"
+        },
+        {
+            "millisFromVideoStart": 56536,
+            "name": "Bufferization start reason = SEEK"
+        },
+        {
+            "millisFromVideoStart": 58825,
+            "name": "Bufferization end reason = SEEK, quality change count = 0"
+        },
+        {
+            "millisFromVideoStart": 60598,
+            "name": "Seek to 621247"
+        },
+        {
+            "millisFromVideoStart": 60619,
+            "name": "Bufferization start reason = SEEK"
+        },
+        {
+            "millisFromVideoStart": 60627,
+            "name": "Seek to 618842"
+        },
+        {
+            "millisFromVideoStart": 62457,
+            "name": "Bufferization end reason = SEEK, quality change count = 0"
+        },
+        {
+            "millisFromVideoStart": 67019,
+            "name": "Seek to 585645"
+        },
+        {
+            "millisFromVideoStart": 67036,
+            "name": "Bufferization start reason = SEEK"
+        },
+        {
+            "millisFromVideoStart": 67049,
+            "name": "Seek to 592118"
+        },
+        {
+            "millisFromVideoStart": 70874,
+            "name": "Bufferization end reason = SEEK, quality change count = 0"
+        },
+        {
+            "millisFromVideoStart": 72522,
+            "name": "Seek to 567845"
+        },
+        {
+            "millisFromVideoStart": 72544,
+            "name": "Bufferization start reason = SEEK"
+        },
+        {
+            "millisFromVideoStart": 72545,
+            "name": "Seek to 565664"
+        },
+        {
+            "millisFromVideoStart": 74060,
+            "name": "Seek to 506351"
+        },
+        {
+            "millisFromVideoStart": 74111,
+            "name": "Seek to 504733"
+        },
+        {
+            "millisFromVideoStart": 75833,
+            "name": "Bufferization end reason = SEEK, quality change count = 0"
+        },
+        {
+            "millisFromVideoStart": 85134,
+            "name": "onTrackSelected isAuto = true, bitrate = 258"
+        },
+        {
+            "millisFromVideoStart": 364211,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/28_2kk91dv260S8AmEbjGw/1522040483/133/0x5000cca255cbfc85/d5849e4105e542b2a81d9605252dcc83.mp4Frag104Num104.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.NoRouteToHostException: No route to host\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 367212,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/28_2kk91dv260S8AmEbjGw/1522040483/133/0x5000cca255cbfc85/d5849e4105e542b2a81d9605252dcc83.mp4Frag104Num104.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.NoRouteToHostException: No route to host\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 370213,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/28_2kk91dv260S8AmEbjGw/1522040483/133/0x5000cca255cbfc85/d5849e4105e542b2a81d9605252dcc83.mp4Frag104Num104.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.NoRouteToHostException: No route to host\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 384926,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/YU0H88cUzoy0J7gnUU0Bcg/1522040483/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag103Num103.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 391670,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: com.google.android.exoplayer2.source.hls.SlowChunkException: Read timeout occured after 6000 ms\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.read(RtHttpDataSource.kt:73)\n\tat com.google.android.exoplayer2.extractor.DefaultExtractorInput.readFromDataSource(DefaultExtractorInput.java:260)\n\tat com.google.android.exoplayer2.extractor.DefaultExtractorInput.read(DefaultExtractorInput.java:61)\n\tat com.google.android.exoplayer2.extractor.ts.TsExtractor.read(TsExtractor.java:236)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:285)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: com.google.android.exoplayer2.source.hls.SlowChunkException: Read timeout occured after 6000 ms\n\t... 10 more\n"
+        },
+        {
+            "millisFromVideoStart": 396805,
+            "name": "Bufferization start reason = BUFFER_EMPTY"
+        },
+        {
+            "millisFromVideoStart": 398685,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/YU0H88cUzoy0J7gnUU0Bcg/1522040483/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag103Num103.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 406719,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/YU0H88cUzoy0J7gnUU0Bcg/1522040483/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag103Num103.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 406778,
+            "name": "VideoNetworkProblemsChange isProblems = true"
+        },
+        {
+            "millisFromVideoStart": 406783,
+            "name": "VideoNetworkProblemsChange isProblems = false"
+        },
+        {
+            "millisFromVideoStart": 406786,
+            "name": "Seek to 825668"
+        },
+        {
+            "millisFromVideoStart": 406793,
+            "name": "Source error: com.google.android.exoplayer2.ExoPlaybackException\n\tat com.google.android.exoplayer2.ExoPlayerImplInternal.handleMessage(ExoPlayerImplInternal.java:349)\n\tat android.os.Handler.dispatchMessage(Handler.java:98)\n\tat android.os.Looper.loop(Looper.java:163)\n\tat android.os.HandlerThread.run(HandlerThread.java:61)\nCaused by: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/YU0H88cUzoy0J7gnUU0Bcg/1522040483/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag103Num103.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 415170,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.NoRouteToHostException: No route to host\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 8 more\n"
+        },
+        {
+            "millisFromVideoStart": 418164,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.NoRouteToHostException: No route to host\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 8 more\n"
+        },
+        {
+            "millisFromVideoStart": 421169,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.NoRouteToHostException: No route to host\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 8 more\n"
+        },
+        {
+            "millisFromVideoStart": 424184,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.NoRouteToHostException: No route to host\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 8 more\n"
+        },
+        {
+            "millisFromVideoStart": 424192,
+            "name": "VideoNetworkProblemsChange isProblems = true"
+        },
+        {
+            "millisFromVideoStart": 424195,
+            "name": "VideoNetworkProblemsChange isProblems = false"
+        },
+        {
+            "millisFromVideoStart": 424197,
+            "name": "Seek to 825668"
+        },
+        {
+            "millisFromVideoStart": 424203,
+            "name": "Source error: com.google.android.exoplayer2.ExoPlaybackException\n\tat com.google.android.exoplayer2.ExoPlayerImplInternal.handleMessage(ExoPlayerImplInternal.java:349)\n\tat android.os.Handler.dispatchMessage(Handler.java:98)\n\tat android.os.Looper.loop(Looper.java:163)\n\tat android.os.HandlerThread.run(HandlerThread.java:61)\nCaused by: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.NoRouteToHostException: No route to host\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 8 more\n"
+        },
+        {
+            "millisFromVideoStart": 427203,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.NoRouteToHostException: No route to host\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 8 more\n"
+        },
+        {
+            "millisFromVideoStart": 431028,
+            "name": "onTrackSelected isAuto = true, bitrate = 93"
+        },
+        {
+            "millisFromVideoStart": 432312,
+            "name": "Bufferization end reason = STARTING, quality change count = 1"
+        },
+        {
+            "millisFromVideoStart": 508004,
+            "name": "onTrackSelected isAuto = true, bitrate = 258"
+        },
+        {
+            "millisFromVideoStart": 595156,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: com.google.android.exoplayer2.source.hls.SlowChunkException: After 10000 must be downloaded more 0.4, but its only 0.31000885\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.read(RtHttpDataSource.kt:65)\n\tat com.google.android.exoplayer2.extractor.DefaultExtractorInput.readFromDataSource(DefaultExtractorInput.java:260)\n\tat com.google.android.exoplayer2.extractor.DefaultExtractorInput.read(DefaultExtractorInput.java:61)\n\tat com.google.android.exoplayer2.extractor.ts.TsExtractor.read(TsExtractor.java:236)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:285)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: com.google.android.exoplayer2.source.hls.SlowChunkException: After 10000 must be downloaded more 0.4, but its only 0.31000885\n\t... 10 more\n"
+        },
+        {
+            "millisFromVideoStart": 598752,
+            "name": "onTrackSelected isAuto = true, bitrate = 93"
+        },
+        {
+            "millisFromVideoStart": 638544,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: com.google.android.exoplayer2.source.hls.SlowChunkException: Read timeout occured after 6000 ms\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.read(RtHttpDataSource.kt:73)\n\tat com.google.android.exoplayer2.extractor.DefaultExtractorInput.readFromDataSource(DefaultExtractorInput.java:260)\n\tat com.google.android.exoplayer2.extractor.DefaultExtractorInput.read(DefaultExtractorInput.java:61)\n\tat com.google.android.exoplayer2.extractor.ts.TsExtractor.read(TsExtractor.java:236)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:285)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: com.google.android.exoplayer2.source.hls.SlowChunkException: Read timeout occured after 6000 ms\n\t... 10 more\n"
+        },
+        {
+            "millisFromVideoStart": 649100,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/kr3YJRpwbbpUlZXHeUT47A/1522040914/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag136Num135.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:203)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: timeout\n\tat com.android.okhttp.okio.Okio$3.newTimeoutException(Okio.java:212)\n\tat com.android.okhttp.okio.AsyncTimeout.exit(AsyncTimeout.java:261)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:215)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)\n\tat com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)\n\tat com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)\n\tat com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)\n\tat com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:907)\n\tat com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:783)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:463)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:405)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:521)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:200)\n\t... 7 more\nCaused by: java.net.SocketException: Socket closed\n\tat java.net.SocketInputStream.socketRead0(Native Method)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:151)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:120)\n\tat com.android.okhttp.okio.Okio$2.read(Okio.java:136)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)\n\t... 18 more\n"
+        },
+        {
+            "millisFromVideoStart": 660140,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/kr3YJRpwbbpUlZXHeUT47A/1522040914/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag136Num135.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:203)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: timeout\n\tat com.android.okhttp.okio.Okio$3.newTimeoutException(Okio.java:212)\n\tat com.android.okhttp.okio.AsyncTimeout.exit(AsyncTimeout.java:261)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:215)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)\n\tat com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)\n\tat com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)\n\tat com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)\n\tat com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:907)\n\tat com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:783)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:463)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:405)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:521)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:200)\n\t... 7 more\nCaused by: java.net.SocketException: Socket closed\n\tat java.net.SocketInputStream.socketRead0(Native Method)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:151)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:120)\n\tat com.android.okhttp.okio.Okio$2.read(Okio.java:136)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)\n\t... 18 more\n"
+        },
+        {
+            "millisFromVideoStart": 668151,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/kr3YJRpwbbpUlZXHeUT47A/1522040914/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag136Num135.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 677554,
+            "name": "onTrackSelected isAuto = true, bitrate = 163"
+        },
+        {
+            "millisFromVideoStart": 678707,
+            "name": "onTrackSelected isAuto = true, bitrate = 258"
+        },
+        {
+            "millisFromVideoStart": 737695,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: com.google.android.exoplayer2.source.hls.SlowChunkException: Read timeout occured after 6000 ms\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.read(RtHttpDataSource.kt:73)\n\tat com.google.android.exoplayer2.extractor.DefaultExtractorInput.readFromDataSource(DefaultExtractorInput.java:260)\n\tat com.google.android.exoplayer2.extractor.DefaultExtractorInput.read(DefaultExtractorInput.java:61)\n\tat com.google.android.exoplayer2.extractor.ts.TsExtractor.read(TsExtractor.java:236)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:285)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: com.google.android.exoplayer2.source.hls.SlowChunkException: Read timeout occured after 6000 ms\n\t... 10 more\n"
+        },
+        {
+            "millisFromVideoStart": 743718,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/kr3YJRpwbbpUlZXHeUT47A/1522040914/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag134Num134.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 749736,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/kr3YJRpwbbpUlZXHeUT47A/1522040914/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag134Num134.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 757152,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/kr3YJRpwbbpUlZXHeUT47A/1522040914/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag134Num134.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:203)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: timeout\n\tat com.android.okhttp.okio.Okio$3.newTimeoutException(Okio.java:212)\n\tat com.android.okhttp.okio.AsyncTimeout.exit(AsyncTimeout.java:261)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:215)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)\n\tat com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)\n\tat com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)\n\tat com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)\n\tat com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:907)\n\tat com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:783)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:463)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:405)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:521)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:200)\n\t... 7 more\nCaused by: java.net.SocketException: Socket closed\n\tat java.net.SocketInputStream.socketRead0(Native Method)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:151)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:120)\n\tat com.android.okhttp.okio.Okio$2.read(Okio.java:136)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)\n\t... 18 more\n"
+        },
+        {
+            "millisFromVideoStart": 765169,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/kr3YJRpwbbpUlZXHeUT47A/1522040914/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag134Num134.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 774192,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/kr3YJRpwbbpUlZXHeUT47A/1522040914/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag134Num134.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 789484,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: com.google.android.exoplayer2.source.hls.SlowChunkException: Read timeout occured after 6000 ms\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.read(RtHttpDataSource.kt:73)\n\tat com.google.android.exoplayer2.extractor.DefaultExtractorInput.readFromDataSource(DefaultExtractorInput.java:260)\n\tat com.google.android.exoplayer2.extractor.DefaultExtractorInput.read(DefaultExtractorInput.java:61)\n\tat com.google.android.exoplayer2.extractor.ts.TsExtractor.read(TsExtractor.java:236)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:285)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: com.google.android.exoplayer2.source.hls.SlowChunkException: Read timeout occured after 6000 ms\n\t... 10 more\n"
+        },
+        {
+            "millisFromVideoStart": 800502,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/kr3YJRpwbbpUlZXHeUT47A/1522040914/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag134Num134.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 805054,
+            "name": "VideoNetworkProblemsChange isProblems = true"
+        },
+        {
+            "millisFromVideoStart": 805056,
+            "name": "VideoNetworkProblemsChange isProblems = false"
+        },
+        {
+            "millisFromVideoStart": 805064,
+            "name": "Bufferization start reason = STARTING"
+        },
+        {
+            "millisFromVideoStart": 805064,
+            "name": "Seek to 1073129"
+        },
+        {
+            "millisFromVideoStart": 805071,
+            "name": "Source error: com.google.android.exoplayer2.ExoPlaybackException\n\tat com.google.android.exoplayer2.ExoPlayerImplInternal.handleMessage(ExoPlayerImplInternal.java:349)\n\tat android.os.Handler.dispatchMessage(Handler.java:98)\n\tat android.os.Looper.loop(Looper.java:163)\n\tat android.os.HandlerThread.run(HandlerThread.java:61)\nCaused by: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://video-1-207.rutube.ru/hls-vod/kr3YJRpwbbpUlZXHeUT47A/1522040914/119/0x500003970bf01719/ac8d9372788d4265b7bf9ad607edbf22.mp4Frag134Num134.ts\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.loadMedia(HlsMediaChunk.java:272)\n\tat com.google.android.exoplayer2.source.hls.HlsMediaChunk.load(HlsMediaChunk.java:219)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 7 more\n"
+        },
+        {
+            "millisFromVideoStart": 821477,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:203)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: timeout\n\tat com.android.okhttp.okio.Okio$3.newTimeoutException(Okio.java:212)\n\tat com.android.okhttp.okio.AsyncTimeout.exit(AsyncTimeout.java:261)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:215)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)\n\tat com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)\n\tat com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)\n\tat com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)\n\tat com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:907)\n\tat com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:783)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:463)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:405)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:521)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:200)\n\t... 8 more\nCaused by: java.net.SocketException: Socket closed\n\tat java.net.SocketInputStream.socketRead0(Native Method)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:151)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:120)\n\tat com.android.okhttp.okio.Okio$2.read(Okio.java:136)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)\n\t... 19 more\n"
+        },
+        {
+            "millisFromVideoStart": 827505,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 8 more\n"
+        },
+        {
+            "millisFromVideoStart": 848458,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.NoRouteToHostException: No route to host\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 8 more\n"
+        },
+        {
+            "millisFromVideoStart": 860977,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:203)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: timeout\n\tat com.android.okhttp.okio.Okio$3.newTimeoutException(Okio.java:212)\n\tat com.android.okhttp.okio.AsyncTimeout.exit(AsyncTimeout.java:261)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:215)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)\n\tat com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)\n\tat com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)\n\tat com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)\n\tat com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:907)\n\tat com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:783)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:463)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:405)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:521)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:200)\n\t... 8 more\nCaused by: java.net.SocketException: Socket closed\n\tat java.net.SocketInputStream.socketRead0(Native Method)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:151)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:120)\n\tat com.android.okhttp.okio.Okio$2.read(Okio.java:136)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)\n\t... 19 more\n"
+        },
+        {
+            "millisFromVideoStart": 860986,
+            "name": "VideoNetworkProblemsChange isProblems = true"
+        },
+        {
+            "millisFromVideoStart": 860987,
+            "name": "VideoNetworkProblemsChange isProblems = false"
+        },
+        {
+            "millisFromVideoStart": 860990,
+            "name": "Seek to 1073129"
+        },
+        {
+            "millisFromVideoStart": 861008,
+            "name": "Source error: com.google.android.exoplayer2.ExoPlaybackException\n\tat com.google.android.exoplayer2.ExoPlayerImplInternal.handleMessage(ExoPlayerImplInternal.java:349)\n\tat android.os.Handler.dispatchMessage(Handler.java:98)\n\tat android.os.Looper.loop(Looper.java:163)\n\tat android.os.HandlerThread.run(HandlerThread.java:61)\nCaused by: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:203)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: timeout\n\tat com.android.okhttp.okio.Okio$3.newTimeoutException(Okio.java:212)\n\tat com.android.okhttp.okio.AsyncTimeout.exit(AsyncTimeout.java:261)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:215)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)\n\tat com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)\n\tat com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)\n\tat com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)\n\tat com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:907)\n\tat com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:783)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:463)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:405)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:521)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:200)\n\t... 8 more\nCaused by: java.net.SocketException: Socket closed\n\tat java.net.SocketInputStream.socketRead0(Native Method)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:151)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:120)\n\tat com.android.okhttp.okio.Okio$2.read(Okio.java:136)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)\n\t... 19 more\n"
+        },
+        {
+            "millisFromVideoStart": 869414,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 8 more\n"
+        },
+        {
+            "millisFromVideoStart": 875442,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 8 more\n"
+        },
+        {
+            "millisFromVideoStart": 886961,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:203)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: timeout\n\tat com.android.okhttp.okio.Okio$3.newTimeoutException(Okio.java:212)\n\tat com.android.okhttp.okio.AsyncTimeout.exit(AsyncTimeout.java:261)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:215)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)\n\tat com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)\n\tat com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)\n\tat com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)\n\tat com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)\n\tat com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:907)\n\tat com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:783)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:463)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:405)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:521)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:200)\n\t... 8 more\nCaused by: java.net.SocketTimeoutException: Read timed out\n\tat java.net.SocketInputStream.socketRead0(Native Method)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:151)\n\tat java.net.SocketInputStream.read(SocketInputStream.java:120)\n\tat com.android.okhttp.okio.Okio$2.read(Okio.java:136)\n\tat com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)\n\t... 19 more\n"
+        },
+        {
+            "millisFromVideoStart": 894974,
+            "name": "ResourceLoadTryFailed: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 8 more\n"
+        },
+        {
+            "millisFromVideoStart": 894987,
+            "name": "VideoNetworkProblemsChange isProblems = true"
+        },
+        {
+            "millisFromVideoStart": 895000,
+            "name": "Source error: com.google.android.exoplayer2.ExoPlaybackException\n\tat com.google.android.exoplayer2.ExoPlayerImplInternal.handleMessage(ExoPlayerImplInternal.java:349)\n\tat android.os.Handler.dispatchMessage(Handler.java:98)\n\tat android.os.Looper.loop(Looper.java:163)\n\tat android.os.HandlerThread.run(HandlerThread.java:61)\nCaused by: com.google.android.exoplayer2.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://bl.rutube.ru/route/7453c27358322e916facabab065e6484.m3u8?guids=131666a5-a599-4a65-ba19-627d066301df_1280x720_3775902_avc1.64001f_mp4a.40.2,d5849e41-05e5-42b2-a81d-9605252dcc83_896x504_2118927_avc1.4d401f_mp4a.40.2,4d6eab02-045f-434f-850e-dae14deb39bb_640x360_1341199_avc1.4d401e_mp4a.40.2,ac8d9372-788d-4265-b7bf-9ad607edbf22_512x288_763911_avc1.42c015_mp4a.40.2&sign=72zoBWzW6ixaEwYpUsZcKg&expire=1522105282&scheme=http\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:194)\n\tat ru.rutube.rutubeplayer.player.upstream.RtHttpDataSource.open(RtHttpDataSource.kt:42)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.checkOpened(DataSourceInputStream.java:102)\n\tat com.google.android.exoplayer2.upstream.DataSourceInputStream.open(DataSourceInputStream.java:65)\n\tat com.google.android.exoplayer2.upstream.ParsingLoadable.load(ParsingLoadable.java:129)\n\tat com.google.android.exoplayer2.upstream.Loader$LoadTask.run(Loader.java:308)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)\n\tat java.lang.Thread.run(Thread.java:760)\nCaused by: java.net.SocketTimeoutException: connect timed out\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:334)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:196)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:356)\n\tat java.net.Socket.connect(Socket.java:605)\n\tat com.android.okhttp.internal.Platform.connectSocket(Platform.java:113)\n\tat com.android.okhttp.Connection.connectSocket(Connection.java:196)\n\tat com.android.okhttp.Connection.connect(Connection.java:172)\n\tat com.android.okhttp.Connection.connectAndSetOwner(Connection.java:367)\n\tat com.android.okhttp.OkHttpClient$1.connectAndSetOwner(OkHttpClient.java:130)\n\tat com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:330)\n\tat com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:247)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:457)\n\tat com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:126)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:429)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.makeConnection(DefaultHttpDataSource.java:350)\n\tat com.google.android.exoplayer2.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:192)\n\t... 8 more\n"
+        },
+        {
+            "millisFromVideoStart": 1154228,
+            "name": "VideoNetworkProblemsChange isProblems = false"
+        },
+        {
+            "millisFromVideoStart": 1154229,
+            "name": "Seek to 0"
+        },
+        {
+            "millisFromVideoStart": 1154857,
+            "name": "onTrackSelected isAuto = true, bitrate = 93"
+        },
+        {
+            "millisFromVideoStart": 1155212,
+            "name": "Bufferization end reason = STARTING, quality change count = 1"
+        },
+        {
+            "millisFromVideoStart": 1156475,
+            "name": "Seek to 813819"
+        },
+        {
+            "millisFromVideoStart": 1156497,
+            "name": "Bufferization start reason = SEEK"
+        },
+        {
+            "millisFromVideoStart": 1156558,
+            "name": "Seek to 815437"
+        },
+        {
+            "millisFromVideoStart": 1156580,
+            "name": "Seek to 817056"
+        },
+        {
+            "millisFromVideoStart": 1158260,
+            "name": "Bufferization end reason = SEEK, quality change count = 0"
+        },
+        {
+            "millisFromVideoStart": 1159592,
+            "name": "Seek to 910914"
+        },
+        {
+            "millisFromVideoStart": 1159612,
+            "name": "Bufferization start reason = SEEK"
+        },
+        {
+            "millisFromVideoStart": 1161480,
+            "name": "Bufferization end reason = SEEK, quality change count = 0"
+        },
+        {
+            "millisFromVideoStart": 1162380,
+            "name": "onTrackSelected isAuto = true, bitrate = 258"
+        },
+        {
+            "millisFromVideoStart": 1164601,
+            "name": "Seek to 1027429"
+        },
+        {
+            "millisFromVideoStart": 1164620,
+            "name": "Bufferization start reason = SEEK"
+        },
+        {
+            "millisFromVideoStart": 1164631,
+            "name": "Seek to 1025001"
+        },
+        {
+            "millisFromVideoStart": 1164661,
+            "name": "Seek to 1018584"
+        },
+        {
+            "millisFromVideoStart": 1167895,
+            "name": "Bufferization end reason = SEEK, quality change count = 0"
+        },
+        {
+            "millisFromVideoStart": 1617973,
+            "name": "Paused"
+        }
+    ],
+    "hlsResourceLoadErrorCount": 0,
+    "isLive": false,
+    "kilobyterates": [
+        460,
+        258,
+        163,
+        93
+    ],
+    "net": [
+        {
+            "durationMillis": 1064,
+            "speedKBps": 51
+        },
+        {
+            "durationMillis": 1265,
+            "speedKBps": 83
+        },
+        {
+            "durationMillis": 975,
+            "speedKBps": 109
+        },
+        {
+            "durationMillis": 2329,
+            "speedKBps": 119
+        },
+        {
+            "durationMillis": 252,
+            "speedKBps": 118
+        },
+        {
+            "durationMillis": 99,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 3545,
+            "speedKBps": 78
+        },
+        {
+            "durationMillis": 1983,
+            "speedKBps": 78
+        },
+        {
+            "durationMillis": 4815,
+            "speedKBps": 57
+        },
+        {
+            "durationMillis": 1975,
+            "speedKBps": 77
+        },
+        {
+            "durationMillis": 6140,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 6013,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 17850,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 22071,
+            "speedKBps": 4
+        },
+        {
+            "durationMillis": 481,
+            "speedKBps": 223
+        },
+        {
+            "durationMillis": 500,
+            "speedKBps": 211
+        },
+        {
+            "durationMillis": 526,
+            "speedKBps": 203
+        },
+        {
+            "durationMillis": 552,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 1196,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 836,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 3432,
+            "speedKBps": 30
+        },
+        {
+            "durationMillis": 860,
+            "speedKBps": 124
+        },
+        {
+            "durationMillis": 894,
+            "speedKBps": 118
+        },
+        {
+            "durationMillis": 592,
+            "speedKBps": 126
+        },
+        {
+            "durationMillis": 1971,
+            "speedKBps": 54
+        },
+        {
+            "durationMillis": 526,
+            "speedKBps": 201
+        },
+        {
+            "durationMillis": 595,
+            "speedKBps": 177
+        },
+        {
+            "durationMillis": 375,
+            "speedKBps": 286
+        },
+        {
+            "durationMillis": 483,
+            "speedKBps": 218
+        },
+        {
+            "durationMillis": 110,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 1875,
+            "speedKBps": 56
+        },
+        {
+            "durationMillis": 474,
+            "speedKBps": 223
+        },
+        {
+            "durationMillis": 802,
+            "speedKBps": 133
+        },
+        {
+            "durationMillis": 494,
+            "speedKBps": 214
+        },
+        {
+            "durationMillis": 744,
+            "speedKBps": 143
+        },
+        {
+            "durationMillis": 1419,
+            "speedKBps": 74
+        },
+        {
+            "durationMillis": 580,
+            "speedKBps": 169
+        },
+        {
+            "durationMillis": 2970,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 1348,
+            "speedKBps": 77
+        },
+        {
+            "durationMillis": 653,
+            "speedKBps": 163
+        },
+        {
+            "durationMillis": 458,
+            "speedKBps": 231
+        },
+        {
+            "durationMillis": 99,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 2197,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 1049,
+            "speedKBps": 101
+        },
+        {
+            "durationMillis": 588,
+            "speedKBps": 180
+        },
+        {
+            "durationMillis": 454,
+            "speedKBps": 235
+        },
+        {
+            "durationMillis": 1182,
+            "speedKBps": 89
+        },
+        {
+            "durationMillis": 1117,
+            "speedKBps": 96
+        },
+        {
+            "durationMillis": 888,
+            "speedKBps": 117
+        },
+        {
+            "durationMillis": 819,
+            "speedKBps": 130
+        },
+        {
+            "durationMillis": 1649,
+            "speedKBps": 68
+        },
+        {
+            "durationMillis": 739,
+            "speedKBps": 133
+        },
+        {
+            "durationMillis": 553,
+            "speedKBps": 195
+        },
+        {
+            "durationMillis": 770,
+            "speedKBps": 139
+        },
+        {
+            "durationMillis": 528,
+            "speedKBps": 199
+        },
+        {
+            "durationMillis": 1295,
+            "speedKBps": 211
+        },
+        {
+            "durationMillis": 1211,
+            "speedKBps": 231
+        },
+        {
+            "durationMillis": 1268,
+            "speedKBps": 217
+        },
+        {
+            "durationMillis": 1399,
+            "speedKBps": 196
+        },
+        {
+            "durationMillis": 1200,
+            "speedKBps": 229
+        },
+        {
+            "durationMillis": 2823,
+            "speedKBps": 98
+        },
+        {
+            "durationMillis": 1216,
+            "speedKBps": 227
+        },
+        {
+            "durationMillis": 1706,
+            "speedKBps": 161
+        },
+        {
+            "durationMillis": 1590,
+            "speedKBps": 172
+        },
+        {
+            "durationMillis": 1439,
+            "speedKBps": 189
+        },
+        {
+            "durationMillis": 4271,
+            "speedKBps": 65
+        },
+        {
+            "durationMillis": 2768,
+            "speedKBps": 100
+        },
+        {
+            "durationMillis": 5178,
+            "speedKBps": 52
+        },
+        {
+            "durationMillis": 1592,
+            "speedKBps": 173
+        },
+        {
+            "durationMillis": 1685,
+            "speedKBps": 164
+        },
+        {
+            "durationMillis": 4222,
+            "speedKBps": 65
+        },
+        {
+            "durationMillis": 2951,
+            "speedKBps": 93
+        },
+        {
+            "durationMillis": 2549,
+            "speedKBps": 108
+        },
+        {
+            "durationMillis": 2365,
+            "speedKBps": 116
+        },
+        {
+            "durationMillis": 2302,
+            "speedKBps": 121
+        },
+        {
+            "durationMillis": 4676,
+            "speedKBps": 58
+        },
+        {
+            "durationMillis": 2349,
+            "speedKBps": 117
+        },
+        {
+            "durationMillis": 2315,
+            "speedKBps": 119
+        },
+        {
+            "durationMillis": 2261,
+            "speedKBps": 121
+        },
+        {
+            "durationMillis": 2248,
+            "speedKBps": 122
+        },
+        {
+            "durationMillis": 2299,
+            "speedKBps": 121
+        },
+        {
+            "durationMillis": 4139,
+            "speedKBps": 67
+        },
+        {
+            "durationMillis": 4474,
+            "speedKBps": 64
+        },
+        {
+            "durationMillis": 6372,
+            "speedKBps": 40
+        },
+        {
+            "durationMillis": 2556,
+            "speedKBps": 106
+        },
+        {
+            "durationMillis": 6006,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 6019,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 6012,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 3002,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 6005,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 9006,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 17693,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 6010,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 12754,
+            "speedKBps": 1
+        },
+        {
+            "durationMillis": 19768,
+            "speedKBps": 1
+        },
+        {
+            "durationMillis": 27791,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 27864,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 1850,
+            "speedKBps": 57
+        },
+        {
+            "durationMillis": 1221,
+            "speedKBps": 86
+        },
+        {
+            "durationMillis": 1840,
+            "speedKBps": 57
+        },
+        {
+            "durationMillis": 261,
+            "speedKBps": 413
+        },
+        {
+            "durationMillis": 790,
+            "speedKBps": 136
+        },
+        {
+            "durationMillis": 1314,
+            "speedKBps": 79
+        },
+        {
+            "durationMillis": 902,
+            "speedKBps": 117
+        },
+        {
+            "durationMillis": 848,
+            "speedKBps": 124
+        },
+        {
+            "durationMillis": 753,
+            "speedKBps": 141
+        },
+        {
+            "durationMillis": 905,
+            "speedKBps": 116
+        },
+        {
+            "durationMillis": 817,
+            "speedKBps": 133
+        },
+        {
+            "durationMillis": 620,
+            "speedKBps": 168
+        },
+        {
+            "durationMillis": 699,
+            "speedKBps": 151
+        },
+        {
+            "durationMillis": 570,
+            "speedKBps": 181
+        },
+        {
+            "durationMillis": 1175,
+            "speedKBps": 91
+        },
+        {
+            "durationMillis": 659,
+            "speedKBps": 162
+        },
+        {
+            "durationMillis": 753,
+            "speedKBps": 140
+        },
+        {
+            "durationMillis": 1023,
+            "speedKBps": 103
+        },
+        {
+            "durationMillis": 1512,
+            "speedKBps": 180
+        },
+        {
+            "durationMillis": 1498,
+            "speedKBps": 187
+        },
+        {
+            "durationMillis": 1757,
+            "speedKBps": 151
+        },
+        {
+            "durationMillis": 1484,
+            "speedKBps": 195
+        },
+        {
+            "durationMillis": 1129,
+            "speedKBps": 237
+        },
+        {
+            "durationMillis": 1074,
+            "speedKBps": 251
+        },
+        {
+            "durationMillis": 4223,
+            "speedKBps": 66
+        },
+        {
+            "durationMillis": 2277,
+            "speedKBps": 122
+        },
+        {
+            "durationMillis": 3968,
+            "speedKBps": 68
+        },
+        {
+            "durationMillis": 6016,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 10172,
+            "speedKBps": 3
+        },
+        {
+            "durationMillis": 13767,
+            "speedKBps": 7
+        },
+        {
+            "durationMillis": 1797,
+            "speedKBps": 61
+        },
+        {
+            "durationMillis": 1899,
+            "speedKBps": 54
+        },
+        {
+            "durationMillis": 2063,
+            "speedKBps": 50
+        },
+        {
+            "durationMillis": 2757,
+            "speedKBps": 39
+        },
+        {
+            "durationMillis": 1235,
+            "speedKBps": 87
+        },
+        {
+            "durationMillis": 1243,
+            "speedKBps": 83
+        },
+        {
+            "durationMillis": 759,
+            "speedKBps": 140
+        },
+        {
+            "durationMillis": 475,
+            "speedKBps": 222
+        },
+        {
+            "durationMillis": 7635,
+            "speedKBps": 13
+        },
+        {
+            "durationMillis": 498,
+            "speedKBps": 214
+        },
+        {
+            "durationMillis": 9913,
+            "speedKBps": 10
+        },
+        {
+            "durationMillis": 479,
+            "speedKBps": 220
+        },
+        {
+            "durationMillis": 9031,
+            "speedKBps": 1
+        },
+        {
+            "durationMillis": 19587,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 30627,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 38638,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 44649,
+            "speedKBps": 2
+        },
+        {
+            "durationMillis": 1184,
+            "speedKBps": 89
+        },
+        {
+            "durationMillis": 774,
+            "speedKBps": 135
+        },
+        {
+            "durationMillis": 734,
+            "speedKBps": 145
+        },
+        {
+            "durationMillis": 698,
+            "speedKBps": 154
+        },
+        {
+            "durationMillis": 1043,
+            "speedKBps": 177
+        },
+        {
+            "durationMillis": 1141,
+            "speedKBps": 247
+        },
+        {
+            "durationMillis": 1740,
+            "speedKBps": 153
+        },
+        {
+            "durationMillis": 1202,
+            "speedKBps": 233
+        },
+        {
+            "durationMillis": 11776,
+            "speedKBps": 14
+        },
+        {
+            "durationMillis": 6018,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 12038,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 19453,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 27470,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 36493,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 51786,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 62804,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 67359,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 475,
+            "speedKBps": 116
+        },
+        {
+            "durationMillis": 918,
+            "speedKBps": 114
+        },
+        {
+            "durationMillis": 353,
+            "speedKBps": 202
+        },
+        {
+            "durationMillis": 94,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 2199,
+            "speedKBps": 46
+        },
+        {
+            "durationMillis": 820,
+            "speedKBps": 89
+        },
+        {
+            "durationMillis": 1104,
+            "speedKBps": 98
+        },
+        {
+            "durationMillis": 553,
+            "speedKBps": 189
+        },
+        {
+            "durationMillis": 499,
+            "speedKBps": 212
+        },
+        {
+            "durationMillis": 528,
+            "speedKBps": 195
+        },
+        {
+            "durationMillis": 1479,
+            "speedKBps": 180
+        },
+        {
+            "durationMillis": 662,
+            "speedKBps": 207
+        },
+        {
+            "durationMillis": 112,
+            "speedKBps": 0
+        },
+        {
+            "durationMillis": 3623,
+            "speedKBps": 76
+        },
+        {
+            "durationMillis": 1275,
+            "speedKBps": 214
+        },
+        {
+            "durationMillis": 1282,
+            "speedKBps": 214
+        },
+        {
+            "durationMillis": 1171,
+            "speedKBps": 234
+        },
+        {
+            "durationMillis": 1124,
+            "speedKBps": 247
+        },
+        {
+            "durationMillis": 1229,
+            "speedKBps": 224
+        },
+        {
+            "durationMillis": 969,
+            "speedKBps": 286
+        },
+        {
+            "durationMillis": 1105,
+            "speedKBps": 246
+        },
+        {
+            "durationMillis": 1069,
+            "speedKBps": 259
+        },
+        {
+            "durationMillis": 1137,
+            "speedKBps": 243
+        },
+        {
+            "durationMillis": 1538,
+            "speedKBps": 177
+        },
+        {
+            "durationMillis": 1507,
+            "speedKBps": 184
+        },
+        {
+            "durationMillis": 3990,
+            "speedKBps": 70
+        },
+        {
+            "durationMillis": 2645,
+            "speedKBps": 100
+        },
+        {
+            "durationMillis": 4087,
+            "speedKBps": 68
+        },
+        {
+            "durationMillis": 2873,
+            "speedKBps": 95
+        },
+        {
+            "durationMillis": 2539,
+            "speedKBps": 108
+        },
+        {
+            "durationMillis": 2353,
+            "speedKBps": 116
+        },
+        {
+            "durationMillis": 2296,
+            "speedKBps": 120
+        },
+        {
+            "durationMillis": 2277,
+            "speedKBps": 122
+        },
+        {
+            "durationMillis": 3831,
+            "speedKBps": 71
+        },
+        {
+            "durationMillis": 2824,
+            "speedKBps": 99
+        },
+        {
+            "durationMillis": 3997,
+            "speedKBps": 69
+        },
+        {
+            "durationMillis": 2799,
+            "speedKBps": 98
+        },
+        {
+            "durationMillis": 2477,
+            "speedKBps": 110
+        },
+        {
+            "durationMillis": 2361,
+            "speedKBps": 118
+        },
+        {
+            "durationMillis": 2294,
+            "speedKBps": 119
+        },
+        {
+            "durationMillis": 3976,
+            "speedKBps": 69
+        },
+        {
+            "durationMillis": 2671,
+            "speedKBps": 100
+        },
+        {
+            "durationMillis": 2557,
+            "speedKBps": 109
+        },
+        {
+            "durationMillis": 2490,
+            "speedKBps": 111
+        },
+        {
+            "durationMillis": 4297,
+            "speedKBps": 63
+        },
+        {
+            "durationMillis": 2850,
+            "speedKBps": 97
+        },
+        {
+            "durationMillis": 4096,
+            "speedKBps": 67
+        },
+        {
+            "durationMillis": 2778,
+            "speedKBps": 98
+        },
+        {
+            "durationMillis": 4173,
+            "speedKBps": 64
+        },
+        {
+            "durationMillis": 2886,
+            "speedKBps": 98
+        },
+        {
+            "durationMillis": 2706,
+            "speedKBps": 100
+        },
+        {
+            "durationMillis": 2818,
+            "speedKBps": 98
+        },
+        {
+            "durationMillis": 4160,
+            "speedKBps": 66
+        },
+        {
+            "durationMillis": 2795,
+            "speedKBps": 98
+        },
+        {
+            "durationMillis": 4176,
+            "speedKBps": 65
+        },
+        {
+            "durationMillis": 4218,
+            "speedKBps": 66
+        },
+        {
+            "durationMillis": 3946,
+            "speedKBps": 69
+        },
+        {
+            "durationMillis": 4104,
+            "speedKBps": 67
+        },
+        {
+            "durationMillis": 2919,
+            "speedKBps": 96
+        },
+        {
+            "durationMillis": 2519,
+            "speedKBps": 108
+        },
+        {
+            "durationMillis": 4155,
+            "speedKBps": 66
+        },
+        {
+            "durationMillis": 3025,
+            "speedKBps": 91
+        },
+        {
+            "durationMillis": 2335,
+            "speedKBps": 117
+        },
+        {
+            "durationMillis": 2777,
+            "speedKBps": 100
+        },
+        {
+            "durationMillis": 4983,
+            "speedKBps": 55
+        },
+        {
+            "durationMillis": 2910,
+            "speedKBps": 94
+        },
+        {
+            "durationMillis": 4026,
+            "speedKBps": 66
+        },
+        {
+            "durationMillis": 2851,
+            "speedKBps": 98
+        },
+        {
+            "durationMillis": 2586,
+            "speedKBps": 105
+        },
+        {
+            "durationMillis": 2575,
+            "speedKBps": 107
+        },
+        {
+            "durationMillis": 1934,
+            "speedKBps": 49
+        }
+    ],
+    "videoErrorCount": 0,
+    "videoId": "7453c27358322e916facabab065e6484"
+}

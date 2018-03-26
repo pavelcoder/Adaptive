@@ -63,6 +63,7 @@ void testTrackSelector(vector<PlayedVideo*>* videos, BaseTrackSelector* trackSel
 }
 
 int main(int argc, char** argv) {
+    printf(" Starting..\n");
     vector<PlayedVideo*>* videos = getAllVideos("test-data/*");
     
     printf(" === MinimalTrackSelector ===\n");
