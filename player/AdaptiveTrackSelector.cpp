@@ -18,14 +18,16 @@
 #include "AdaptiveTrackSelector.h"
 #include <math.h>
 #include <algorithm>
+#include <stdio.h>
 
 using namespace std;
 
 AdaptiveTrackSelector::AdaptiveTrackSelector() {}
 
-long AdaptiveTrackSelector::getNextChunkBytesPerSecond(int chunkIndex, long playbackPositionMs, long bufferSizeMs) {
-    long bufferLeftSec = ( bufferSizeMs - playbackPositionMs ) / 1000;
-    return getQualityFromBufferLevel(bufferLeftSec);
+long AdaptiveTrackSelector::getNextChunkBytesPerSecond(int chunkIndex, long playbackPositionMs, long bufferAheadSizeMs) {
+    long bitrate = getQualityFromBufferLevel(bufferAheadSizeMs / 1000);
+    //printf("getNextChunkBytesPerSecond = %ld, buffer = %ld sec\n", bitrate, bufferAheadSizeMs / 1000);
+    return bitrate;
 }
 
 long AdaptiveTrackSelector::getQualityFromBufferLevel(long bufferLeftSec) {

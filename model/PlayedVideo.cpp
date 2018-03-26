@@ -13,6 +13,8 @@
 
 #include "PlayedVideo.h"
 
+#include <algorithm>
+
 string getFileString(string path){
     std::ifstream ifs(path);
     return string((std::istreambuf_iterator<char>(ifs)),
@@ -38,7 +40,7 @@ PlayedVideo* PlayedVideo::readFromFile(string filename) {
 
     for(int j = 0; j < root["net"].size(); j++) {
         const Json::Value item = root["net"][j];
-        long millis = item["duration"].asInt() * 1000L;
+        long millis = item["durationMillis"].asInt();
         long speed = item["speedKBps"].asInt() * 1024L;
         if( speed == 0 ) {
             speed = 1;
@@ -48,9 +50,11 @@ PlayedVideo* PlayedVideo::readFromFile(string filename) {
     }
     
     long *qualities = new long[root["kylobyterates"].size()];
-    for( int j = 0; j < root["kylobyterates"].size(); ++j ) {
-        qualities[j] = root["kylobyterates"][j].asInt() * 1024;
+    for( int j = 0; j < root["kilobyterates"].size(); ++j ) {
+        qualities[j] = root["kilobyterates"][j].asInt() * 1024;
     }
-    playedVideo->video = new Video(root["chunkCount"].asInt(), (int)root["kylobyterates"].size(), qualities);        
+    sort(qualities, qualities + root["kilobyterates"].size() );
+
+    playedVideo->video = new Video(root["chunkCount"].asInt(), (int)root["kilobyterates"].size(), qualities);
     return playedVideo;
 }

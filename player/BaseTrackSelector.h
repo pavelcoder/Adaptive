@@ -19,7 +19,7 @@
 class BaseTrackSelector : public PlayerListener {
 public:
     BaseTrackSelector();
-    virtual long getNextChunkBytesPerSecond(int chunkIndex, long playbackPositionMs, long bufferSizeMs) = 0;
+    virtual long getNextChunkBytesPerSecond(int chunkIndex, long playbackPositionMs, long bufferAheadSizeMs) = 0;
     
     virtual void onVideoStarted(Video* video);
     virtual void onVideoStopped(Video* video, int chunksPlayed, bool isSuccess);

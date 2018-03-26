@@ -1,0 +1,55 @@
+{
+    "bufferizationCount": 0,
+    "chunkCount": 4,
+    "chunkCountStartedDownload": 0,
+    "chunkCountSuccessfullyDownloaded": 0,
+    "events": [
+        {
+            "millisFromVideoStart": 286,
+            "name": "onTrackSelected isAuto = true, bitrate = 93"
+        },
+        {
+            "millisFromVideoStart": 658,
+            "name": "Bufferization end reason = STARTING, quality change count = 1"
+        },
+        {
+            "millisFromVideoStart": 12238,
+            "name": "Seek to 28186"
+        },
+        {
+            "millisFromVideoStart": 12273,
+            "name": "Bufferization start reason = SEEK"
+        },
+        {
+            "millisFromVideoStart": 18080,
+            "name": "Bufferization end reason = SEEK, quality change count = 0"
+        }
+    ],
+    "hlsResourceLoadErrorCount": 0,
+    "isLive": false,
+    "kilobyterates": [
+        235,
+        167,
+        93
+    ],
+    "net": [
+        {
+            "durationMillis": 2600,
+            "speedKBps": 41
+        },
+        {
+            "durationMillis": 5131,
+            "speedKBps": 20
+        },
+        {
+            "durationMillis": 4530,
+            "speedKBps": 20
+        },
+        {
+            "durationMillis": 5389,
+            "speedKBps": 19
+        }
+    ],
+    "videoErrorCount": 0,
+    "videoId": "21025a1fda4345d1524ba9c073a01117"
+}

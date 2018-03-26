@@ -3,10 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  * 
- * Параметры для деления данных от юзеров на группы:
- * isLive, WiFi/3G, chunkErrorCount, hlsErrorCount, 
- * network speed group?, bufferizationCount
- * 
  */
 
 /* 

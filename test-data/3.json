@@ -1,0 +1,70 @@
+{
+    "bufferizationCount": 0,
+    "chunkCount": 9,
+    "chunkCountStartedDownload": 0,
+    "chunkCountSuccessfullyDownloaded": 0,
+    "events": [
+        {
+            "millisFromVideoStart": 57,
+            "name": "onTrackSelected isAuto = true, bitrate = 58"
+        },
+        {
+            "millisFromVideoStart": 1328,
+            "name": "Bufferization end reason = STARTING, quality change count = 1"
+        },
+        {
+            "millisFromVideoStart": 7929,
+            "name": "onTrackSelected isAuto = true, bitrate = 101"
+        }
+    ],
+    "hlsResourceLoadErrorCount": 0,
+    "isLive": false,
+    "kilobyterates": [
+        101,
+        58
+    ],
+    "net": [
+        {
+            "durationMillis": 1041,
+            "speedKBps": 79
+        },
+        {
+            "durationMillis": 301,
+            "speedKBps": 275
+        },
+        {
+            "durationMillis": 6291,
+            "speedKBps": 13
+        },
+        {
+            "durationMillis": 15,
+            "speedKBps": 9770
+        },
+        {
+            "durationMillis": 2204,
+            "speedKBps": 62
+        },
+        {
+            "durationMillis": 2802,
+            "speedKBps": 38
+        },
+        {
+            "durationMillis": 59,
+            "speedKBps": 1780
+        },
+        {
+            "durationMillis": 673,
+            "speedKBps": 157
+        },
+        {
+            "durationMillis": 1436,
+            "speedKBps": 56
+        },
+        {
+            "durationMillis": 412,
+            "speedKBps": 73
+        }
+    ],
+    "videoErrorCount": 0,
+    "videoId": "eddbb6146cf9e9d46ac0b956b6e9acfd"
+}
